@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Kit Request Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    label {
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      margin-bottom: 15px;
+      padding: 8px;
+    }
+    button {
+      padding: 10px 15px;
+      background-color: #0078D4;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #confirmation {
+      margin-top: 20px;
+      color: green;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Rugby Kit Request Form</h2>
+
+  <form id="kitForm">
+    <label for="playerName">Player Name:</label>
+    <input type="text" id="playerName" name="playerName" required>
+
+    <label for="kitType">Kit Type:</label>
+    <select id="kitType" name="kitType" required>
+      <option value="Jersey">Jersey</option>
+      <option value="Shorts">Shorts</option>
+      <option value="Socks">Socks</option>
+    </select>
+
+    <label for="size">Size:</label>
+    <select id="size" name="size" required>
+      <option value="S">Small</option>
+      <option value="M">Medium</option>
+      <option value="L">Large</option>
+      <option value="XL">Extra Large</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" min="1" required>
+
+    <button type="submit">Submit Request</button>
+  </form>
+
+  <div id="confirmation">✅ Kit request submitted (test only — not saved anywhere).</div>
+
+  <script>
+    document.getElementById("kitForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("confirmation").style.display = "block";
+      document.getElementById("kitForm").reset();
+    });
+  </script>
+
+</body>
+</html>
