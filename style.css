@@ -134,7 +134,7 @@ body {
 
 
 .section-header {
-    /*position: sticky*/;
+    /*position: sticky;*/
     top: 0;
     background: #f0f8ff;
     padding: 1rem;
