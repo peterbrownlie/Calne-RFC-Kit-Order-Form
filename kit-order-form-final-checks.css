@@ -1,0 +1,10 @@
+
+.review-warning-box {
+  background-color: #fff3cd;
+  color: #856404;
+  padding: 1rem;
+  border: 1px solid #ffeeba;
+  border-radius: 6px;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+}
