@@ -302,3 +302,19 @@ button.review-order-btn:hover {
   font-size: 1.1em;
 }
 
+@media screen and (max-width: 1500px) {
+  #basket-panel {
+    position: relative;
+    width: 100%;
+    max-height: none;
+    overflow: visible;
+    margin-top: 1rem;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 15px;
+    z-index: auto;
+  }
+}
+
+
