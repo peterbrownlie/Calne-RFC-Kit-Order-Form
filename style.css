@@ -250,14 +250,37 @@ button.review-order-btn:hover {
 
 
 .button-nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1rem;
 }
 
 .button-nav-container button {
     margin: 0;
+}
+
+.button-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.top-page-indicator {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: right;
+  margin: 10px;
+  font-style: italic;
+  
+}
+
+.bottom-page-indicator {
+  font-size: 0.9rem;
+  color: #666;
+  text-align: center;
+  margin: 10px;
+  font-style: italic;
 }
 
 .club-logo {
@@ -304,17 +327,10 @@ button.review-order-btn:hover {
 
 @media screen and (max-width: 1500px) {
   #basket-panel {
+	width: 100%;
     position: relative;
-    width: 100%;
-    max-height: none;
     overflow: visible;
-    margin-top: 1rem;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    box-shadow: none;
-    padding: 15px;
-    z-index: auto;
+    z-index: 1;
   }
 }
-
 

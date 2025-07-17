@@ -1,519 +1,975 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
-<head>
-	<meta charset="utf-8"/>
-	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<title>Calne RFC Kit Order Form</title>
-	<link rel="stylesheet" href="style.css" />
-	<link rel="stylesheet" href="shirt-modal-style.css">
-	<link rel="stylesheet" href="kit-order-form-final-checks.css" />
-</head>
-<body>
-<div id="start-screen">
-  <div class="section-header sticky-header">
-    <img src="./images/club_logo.png" alt="Club Logo" class="club-logo" />
-    <h1 align="center">Calne Rugby 2025 Kit Order</h1>
-    <p><strong>Welcome to the official Calne Rugby Club Kit Order Form.</strong></p>
-    <p>
-      To maintain a smart, unified appearance both on and off the field, all players are expected to wear the appropriate club kit for training sessions, match days, and team events. This form lists the essential items required as part of the standard player kit, along with optional extras for those who wish to top up or replace existing gear.
-    </p>
-    <p>
-      We’re pleased to offer this kit with the generous support of our club sponsors, who have made it possible for every player to receive <strong>£120 worth of kit for free.</strong> This allowance will be applied automatically to your order.
-    </p>
-    <p>
-      If you wish to order additional kit beyond the sponsored £120 allowance, you are more than welcome to do so. In this case, we will contact you directly to arrange payment <strong>before</strong> your order is placed.
-    </p>
-    <p>Thank you for representing Calne Rugby with pride and professionalism.</p>
-  </div>
-
-  <div class="form-inputs">
-    <label for="fullName">Name:</label>
-    <input id="fullName" type="text" required><br><br>
-
-    <label for="email">Email:</label>
-    <input id="email" type="email" required><br><br>
-
-    <button class="start-order-btn" id="startButton">Start Order</button>
-  </div>
-</div>
-
-<div class="section" id="section-0"><div class="section-header"><h2>Playing Kit</h2><p>As part of the standard match kit, all players are expected to have their own Calne Rugby shorts and socks. These items are essential for match days to ensure consistency, team identity, and compliance with club standards.
-<br/><br/>Please ensure you include these items in your order if you do not already have them.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC Elite Playing Shorts</h3>
-<p></p><img alt="Calne RFC Elite Playing Shorts" src="./images/calne_rfc_elite_playing_shorts.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Size:
-                <select id="size_0_0"><option "="" value="30">30"</option><option "="" value="32">32"</option><option "="" value="34">34"</option><option "="" value="36">36"</option><option "="" value="38">38"</option><option "="" value="40">40"</option><option "="" value="42">42"</option><option "="" value="44">44"</option><option "="" value="46">46"</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_0_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Elite Playing Shorts', '23.0', 'qty_0_0', 'size_0_0')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Playing Socks</h3>
-<p></p><img alt="Calne RFC Playing Socks" src="./images/calne_rfc_playing_socks.png"/>
-<div class="item-price"><strong>Price: £10.00</strong></div>
-<label>Qty:
-              <input id="qty_0_1" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Playing Socks', '10.0', 'qty_0_1', 'No size')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Elite PRO-FIT Playing Shirt</h3>
-<p>Calne 2025/26 Elite PRO-FIT Playing Shirt (Tight fitting)
-<br/><br/><b>Please note:</b> Shirt measurements provided are taken armpit-to-armpit, not the usual chest circumference. Please measure a similar shirt laid flat from armpit to armpit to select the correct size.  (Green arrow in the bottom corner)
-<br/><br/>Here is a list of the shirt sizes purchased by the club to aid your decision:
-  <br/>4XL (Elite PRO-FIT): Number 17
-  <br/>3XL (Replica FIT): Numbers 1, 3, 16
-  <br/>3XL (Elite PRO-FIT): Numbers 5, 18
-  <br/>2XL (Elite PRO-FIT): Numbers 2, 4, 6, 8, 19, 20
-  <br/>XL (Elite PRO-FIT): Numbers 7, 11, 13, 21, 22, 23
-  <br/>L (Elite PRO-FIT): Numbers 10, 12, 14, 15, 24, 25
-  <br/>M (Elite PRO-FIT): Number 9
- </p>
-
-<img alt="Calne RFC Elite PRO-FIT Playing Shirt" src="./images/calne_rfc_elite_pro-fit_playing_shirt.png"/>
-<div class="item-price"><strong>Price: £37.50</strong></div>
-<label>Size:
-                <select id="size_0_2"><option value="XS (49.5cm)">XS (49.5cm)</option><option value="(51cm)">(51cm)</option><option value="M (54cm)">M (54cm)</option><option value="L (57cm)">L (57cm)</option><option value="XL (60cm)">XL (60cm)</option><option value="2XL (63cm)">2XL (63cm)</option><option value="3XL (66cm)">3XL (66cm)</option><option value="4XL (69cm)">4XL (69cm)</option><option value="5XL (72cm)">5XL (72cm)</option><option value="6XL (75cm)">6XL (75cm)</option><option value="7XL(78cm)">7XL(78cm)</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_0_2" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Elite PRO-FIT Playing Shirt', '37.5', 'qty_0_2', 'size_0_2')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Replica FIT Playing Shirt</h3>
-<p>Calne 2025/26 Replica FIT Playing Shirt (Loose fitting with collar)<br/><br/>
-<b>Please note</b>: Shirt measurements provided are taken armpit-to-armpit, not the usual chest circumference. Please measure a similar shirt laid flat from armpit to armpit to select the correct size.  (Green arrow in the bottom corner)
-<br/><br/>Here is a list of the shirt sizes purchased by the club to aid your decision:
-  <br/>4XL (Elite PRO-FIT): Number 17
-  <br/>3XL (Replica FIT): Numbers 1, 3, 16
-  <br/>3XL (Elite PRO-FIT): Numbers 5, 18
-  <br/>2XL (Elite PRO-FIT): Numbers 2, 4, 6, 8, 19, 20
-  <br/>XL (Elite PRO-FIT): Numbers 7, 11, 13, 21, 22, 23
-  <br/>L (Elite PRO-FIT): Numbers 10, 12, 14, 15, 24, 25
-  <br/>M (Elite PRO-FIT): Number 9
-</p>
-<img alt="Calne RFC Replica FIT Playing Shirt" src="./images/calne_rfc_replica_fit_playing_shirt.png"/>
-<div class="item-price"><strong>Price: £37.50</strong></div>
-<label>Size:
-                <select id="size_0_3"><option value="XS (42cm)">XS (42cm)</option><option value="(45cm)">(45cm)</option><option value="M (48cm)">M (48cm)</option><option value="L (49cm)">L (49cm)</option><option value="XL (51cm)">XL (51cm)</option><option value="2XL (53cm)">2XL (53cm)</option><option value="3XL (55cm)">3XL (55cm)</option><option value="4XL (57cm)">4XL (57cm)</option><option value="5XL (59cm)">5XL (59cm)</option><option value="6XL (61cm)">6XL (61cm)</option><option value="7XL(63cm)">7XL(63cm)</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_0_3" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Replica FIT Playing Shirt', '37.5', 'qty_0_3', 'size_0_3')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="next-btn" onclick="navigate(1)">Next</button></div></div>
-<div class="section" id="section-1"><div class="section-header"><h2>After Match</h2><p>All players are expected to wear the official after-match shirt following every home game. This is an important part of representing Calne Rugby Club both on and off the field.
-<br/><br/>We’re proud to have <b>The Pewsham</b> as a key sponsor, whose generous support plays a vital role in the success of our club. Their logo is featured on the after-match shirts, wearing this shirt after home games is compulsory for all players.
-<br/><br/>Please ensure you include one in your order if you do not already have one.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC After-Match Shirt</h3>
-<p></p><img alt="Calne RFC After-Match Shirt" src="./images/calne_rfc_after-match_shirt.png"/>
-<div class="item-price"><strong>Price: £32.00</strong></div>
-<label>Size:
-    <select id="size_1_0">
-		<option "="" value="13.5">13.5" Collar (32/34"Chest)</option>
-		<option "="" value="14">14" Collar (35"Chest)</option>
-		<option "="" value="14.5">14.5" Collar (36/38"Chest)</option>
-		<option "="" value="15">15" Collar (39"Chest)</option>
-		<option "="" value="15.5">15.5" Collar (40"Chest)</option>
-		<option "="" value="16">16" Collar (41"Chest)</option>
-		<option "="" value="16.5">16.5" Collar (42"Chest)</option>
-		<option "="" value="17">17" Collar (43"Chest)</option>
-		<option "="" value="17.5">17.5" Collar (44"Chest)</option>
-		<option "="" value="18">18" Collar (45"Chest)</option>
-		<option "="" value="18.5">18.5" Collar (46/48"Chest)</option>
-		<option "="" value="19">19" Collar (49"Chest)</option>
-		<option "="" value="19.5">19.5" Collar (50/52"Chest)</option>
-		<option "="" value="20">20" Collar (54/56"Chest)</option>
-		<option "="" value="21">21" Collar (58/60"Chest)</option>
-		<option "="" value="22">22" Collar (62/64"Chest)</option>
-		<option "="" value="23">23" Collar (66/68"Chest)</option>
-	</select>
-</label><br/>
-<label>Qty:
-              <input id="qty_1_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC After-Match Shirt', '32.0', 'qty_1_0', 'size_1_0')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="prev-btn" onclick="navigate(0)">Back</button><button class="next-btn" onclick="navigate(2)">Next</button></div></div>
-<div class="section" id="section-2"><div class="section-header"><h2>Training Kit</h2><p>Our Calne Rugby training kit is designed to offer comfort and performance during all training sessions. This includes items such as training tops, shorts, and base layers — suitable for all levels and conditions.
-<br/><br/>While the training kit is not compulsory, we encourage players to wear club-branded kit to training as it helps promote team identity and professionalism across the club.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC Primus Smock</h3>
-<p></p><img alt="Calne RFC Primus Smock" src="./images/calne_rfc_primus_smock.png"/>
-<div class="item-price"><strong>Price: £28.00</strong></div>
-<label>Size:
-                <select id="size_2_0"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option><option value="5XL">5XL</option><option value="6XL">6XL</option><option value="7XL">7XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_2_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Primus Smock', '28.0', 'qty_2_0', 'size_2_0')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Fortis Vest</h3>
-<p>Stay Cool through those high energy sessions in the Fortis Training Vest.</p><img alt="Calne RFC Fortis Vest" src="./images/calne_rfc_fortis_vest.png"/>
-<div class="item-price"><strong>Price: £20.00</strong></div>
-<label>Size:
-                <select id="size_2_1"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_2_1" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Fortis Vest', '20.0', 'qty_2_1', 'size_2_1')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Fortis Tee</h3>
-<p>Power on through those high, energy absorbing sessions in this training t-shirt.</p><img alt="Calne RFC Fortis Tee" src="./images/calne_rfc_fortis_tee.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Size:
-                <select id="size_2_2"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_2_2" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Fortis Tee', '23.0', 'qty_2_2', 'size_2_2')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="prev-btn" onclick="navigate(1)">Back</button><button class="next-btn" onclick="navigate(3)">Next</button></div></div>
-<div class="section" id="section-3"><div class="section-header"><h2>Leisure Wear</h2><p>Our range of Calne Rugby leisure wear is designed for comfort, style, and showing off your club pride outside of training and match days. This includes items such as hoodies, polos, tracksuit bottoms, and jackets — perfect for travelling to fixtures, relaxing post-match, or wearing around town.
-<br/><br/>Leisure wear is entirely optional and not part of the compulsory kit, but it's a great way to look the part and feel part of the club community.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC Fortis Polo</h3>
-<p>Crafted with a folded collar and 2 button fastening placket, these tops feature short sleeves to give off that classic look. </p><img alt="Calne RFC Fortis Polo" src="./images/calne_rfc_fortis_polo.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Size:
-                <select id="size_3_0"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_3_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Fortis Polo', '23.0', 'qty_3_0', 'size_3_0')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Fortis Hoodie</h3>
-<p>Comfort and warmth are key and this top provides both. Designed with a brushed fleece lining this hoodie is perfect for those colder training and travelling days. </p><img alt="Calne RFC Fortis Hoodie" src="./images/calne_rfc_fortis_hoodie.png"/>
-<div class="item-price"><strong>Price: £39.00</strong></div>
-<label>Size:
-                <select id="size_3_1"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_3_1" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Fortis Hoodie', '39.0', 'qty_3_1', 'size_3_1')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Fortis Quarter Zip Sweat</h3>
-<p>Developed with wicking technology that sweeps sweat away from the skin, this quarter zip top is perfect for training or travelling in. </p><img alt="Calne RFC Fortis Quarter Zip Sweat" src="./images/calne_rfc_fortis_quarter_zip_sweat.png"/>
-<div class="item-price"><strong>Price: £35.00</strong></div>
-<label>Size:
-                <select id="size_3_2"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_3_2" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Fortis Quarter Zip Sweat', '35.0', 'qty_3_2', 'size_3_2')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC NAVY Primus Quarter Zip</h3>
-<p>The navy quarter zip is made from a soft, stretchy and breathable fabric, this multi-use 1/4 zip is both functional is use and professional in look. The navy quarter zip is the perfect Quarter Zip for off and on the field. The fabric hugs the body but allows for full, unrestricted movement.</p><img alt="Calne RFC NAVY Primus Quarter Zip" src="./images/calne_rfc_primus_quarter_zip.png"/>
-<div class="item-price"><strong>Price: £32.00</strong></div>
-<label>Size:
-                <select id="size_3_3"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option><option value="5XL">5XL</option><option value="6XL">6XL</option><option value="7XL">7XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_3_3" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC NAVY Primus Quarter Zip', '32.0', 'qty_3_3', 'size_3_3')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Royal Primus Quarter Zip</h3>
-<p>The royal quarter zip is made from a soft, stretchy and breathable fabric, this multi-use 1/4 zip is both functional is use and professional in look. The royal quarter zip is the perfect Quarter Zip for off and on the field. The fabric hugs the body but allows for full, unrestricted movement.</p><img alt="Calne RFC Royal Primus Quarter Zip" src="./images/calne_rfc_royal_primus_quarter_zip.png"/>
-<div class="item-price"><strong>Price: £32.00</strong></div>
-<label>Size:
-                <select id="size_3_4"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option><option value="5XL">5XL</option><option value="6XL">6XL</option><option value="7XL">7XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_3_4" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Royal Primus Quarter Zip', '32.0', 'qty_3_4', 'size_3_4')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="prev-btn" onclick="navigate(2)">Back</button><button class="next-btn" onclick="navigate(4)">Next</button></div></div>
-<div class="section" id="section-4"><div class="section-header"><h2>Cold Weather</h2><p>The Cold Weather Kit includes optional items designed to keep players warm and comfortable during the winter months. This range may include thermal base layers, hats, snoods, and mid-layer tops — all suitable for training and warm-ups in colder conditions.
-<br/><br/>While none of these items are compulsory, they are highly recommended to help players stay prepared and perform at their best throughout the season.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC Ventus Gilet</h3>
-<p>The Ventus Gilet is our Spring/Autumn jacket designed to keep your core insulated when temperatures are slightly warmer.</p><img alt="Calne RFC Ventus Gilet" src="./images/calne_rfc_ventus_gilet.png"/>
-<div class="item-price"><strong>Price: £50.00</strong></div>
-<label>Size:
-                <select id="size_4_0"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_4_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Ventus Gilet', '50.0', 'qty_4_0', 'size_4_0')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Tempest Hybrid Jacket</h3>
-<p>The Tempest hybrid jacket is our variable weather jacket designed to protect against the elements; keeping you warm and dry.</p><img alt="Calne RFC Tempest Hybrid Jacket" src="./images/calne_rfc_tempest_hybrid_jacket.png"/>
-<div class="item-price"><strong>Price: £55.00</strong></div>
-<label>Size:
-                <select id="size_4_1"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_4_1" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Tempest Hybrid Jacket', '55.0', 'qty_4_1', 'size_4_1')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Protego Waterproof Jacket</h3>
-<p>The Tempest hybrid jacket is our variable weather jacket designed to protect against the elements; keeping you warm and dry.</p><img alt="Calne RFC Protego Waterproof Jacket" src="./images/calne_rfc_protego_waterproof_jacket.png"/>
-<div class="item-price"><strong>Price: £90.00</strong></div>
-<label>Size:
-                <select id="size_4_2"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_4_2" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Protego Waterproof Jacket', '90.0', 'qty_4_2', 'size_4_2')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Nero Managers Jacket</h3>
-<p>Introducing the Nero Managers Jacket by VX3 –Crafted to keep you at the top of your game. This knee-length jacket boasts unparalleled technical features. Stay dry and comfortable with its fully waterproof design, while the integrated insulation ensures warmth even in the harshest conditions.</p><img alt="Calne RFC Nero Managers Jacket" src="./images/calne_rfc_nero_managers_jacket.png"/>
-<div class="item-price"><strong>Price: £100.00</strong></div>
-<label>Size:
-                <select id="size_4_3"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_4_3" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Nero Managers Jacket', '100.0', 'qty_4_3', 'size_4_3')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Protego Waterproof Trousers</h3>
-<p>These trousers are lightweight and pack down easily to fit into your kit bag making it convenient to always keep with you. The thigh length side zips make putting them on quick and easy. This product goes perfectly with our Protego Jacket so you can stay dry from head to toe.</p><img alt="Calne RFC Protego Waterproof Trousers" src="./images/calne_rfc_protego_waterproof_trousers.png"/>
-<div class="item-price"><strong>Price: £35.00</strong></div>
-<label>Size:
-                <select id="size_4_4"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_4_4" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Protego Waterproof Trousers', '35.0', 'qty_4_4', 'size_4_4')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Duro Elite Sports Robe</h3>
-<p>The robe is oversized so that athletes can comfortably change within it – if you are using the Sports Robe for purely recreational purposes, please select a size down from the recommended size.
-<br/><br/>For any athlete operating outdoors, The Duro Sports Robe is a must have.
-<br/><br/>From open-water swimmers coming out of the water, to players coming off the pitch, slipping into the Duro Sports Robe is quickest way to get warm and dry.</p><img alt="Calne RFC Duro Elite Sports Robe" src="./images/calne_rfc_duro_elite_sports_robe.png"/>
-<div class="item-price"><strong>Price: £115.00</strong></div>
-<label>Size:
-                <select id="size_4_5"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_4_5" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Duro Elite Sports Robe', '115.0', 'qty_4_5', 'size_4_5')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="prev-btn" onclick="navigate(3)">Back</button><button class="next-btn" onclick="navigate(5)">Next</button></div></div>
-<div class="section" id="section-5"><div class="section-header"><h2>Gym Shorts and Leggings</h2><p>This section includes gym shorts and leggings designed for strength &amp; conditioning sessions, indoor training, and general fitness work. These items are made for flexibility, comfort, and support during high-movement activities.
-<br/><br/>While not compulsory, they are a popular choice among players who regularly take part in gym sessions or want versatile training gear to complement their rugby kit.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC Majester Training Short</h3>
-<p>A day to day practical short that can be used on the training field as well as the classroom. Our breathable, crease resistant ProFIT fabric is smart and functional with zip pockets perfect for keeping your valuables safe.</p><img alt="Calne RFC Majester Training Short" src="./images/calne_rfc_majester_training_short.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Size:
-                <select id="size_5_0"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_5_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Majester Training Short', '23.0', 'qty_5_0', 'size_5_0')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Primus Travel Short</h3>
-<p>These breathable shorts will keep the wearer cool and dry as the workout gets harder and higher in intensity. In a regular fit, these shorts are a comfortable balance between loose and snug. They come with 2 pockets and an adjustable elastic drawcord waistband which provides the perfect fit.</p><img alt="Calne RFC Primus Travel Short" src="./images/calne_rfc_primus_travel_short.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Size:
-                <select id="size_5_1"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_5_1" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Primus Travel Short', '23.0', 'qty_5_1', 'size_5_1')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Ludus Gym Shorts</h3>
-<p>Our lightweight, breathable ProFIT fabric makes for a comfortable and ultra-functional short. This design is more fitted than the other shorts in our range.</p><img alt="Calne RFC Ludus Gym Shorts" src="./images/calne_rfc_ludus_gym_shorts.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Size:
-                <select id="size_5_2"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_5_2" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Ludus Gym Shorts', '23.0', 'qty_5_2', 'size_5_2')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Braca Trackpant</h3>
-<p>A modern, tapered fit for the classic track pant. This 2-layer track pant is a must for training and match days. 
-<br/><br/>The inner lining is a combination of a soft cotton upper with a silky nylon from the knee down. The outer is our lightweight but durable ProFIT material which helps to retain warmth but allow breathability. </p><img alt="Calne RFC Braca Trackpant" src="./images/calne_rfc_braca_trackpant.png"/>
-<div class="item-price"><strong>Price: £37.00</strong></div>
-<label>Size:
-                <select id="size_5_3"><option value="XS">XS</option><option value="S">S</option><option value="M">M</option><option value="L">L</option><option value="XL">XL</option><option value="2XL">2XL</option><option value="3XL">3XL</option><option value="4XL">4XL</option></select>
-</label><br/>
-<label>Qty:
-              <input id="qty_5_3" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Braca Trackpant', '37.0', 'qty_5_3', 'size_5_3')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="prev-btn" onclick="navigate(4)">Back</button><button class="next-btn" onclick="navigate(6)">Next</button></div></div>
-<div class="section" id="section-6"><div class="section-header"><h2>Extras</h2><p>This section includes a selection of useful extras to complete your kit. Items such as the Calne Rugby kit bag and club beanie hats are available for those who want practical and stylish additions to their rugby gear.
-<br/><br/>These items are optional, but they’re great for keeping your kit organised and staying warm on the sidelines or around town.</p></div>
-<div class="item">
-<div>
-<h3>Calne RFC Performance Kit Bag</h3>
-<p></p><img alt="Calne RFC Performance Kit Bag" src="./images/calne_rfc_performance_kit_bag.png"/>
-<div class="item-price"><strong>Price: £30.00</strong></div>
-<label>Qty:
-              <input id="qty_6_0" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Performance Kit Bag', '30.0', 'qty_6_0', 'No size')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Odd Ball Beanie</h3>
-<p></p><img alt="Calne RFC Odd Ball Beanie" src="./images/calne_rfc_odd_ball_beanie.png"/>
-<div class="item-price"><strong>Price: £15.00</strong></div>
-<label>Qty:
-              <input id="qty_6_1" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Odd Ball Beanie', '15.0', 'qty_6_1', 'No size')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Trucker Cap</h3>
-<p></p><img alt="Calne RFC Trucker Cap" src="./images/calne_rfc_trucker_cap.png"/>
-<div class="item-price"><strong>Price: £17.00</strong></div>
-<label>Qty:
-              <input id="qty_6_2" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Trucker Cap', '17.0', 'qty_6_2', 'No size')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Classic Cap</h3>
-<p></p><img alt="Calne RFC Classic Cap" src="./images/calne_rfc_classic_cap.png"/>
-<div class="item-price"><strong>Price: £17.00</strong></div>
-<label>Qty:
-              <input id="qty_6_3" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Classic Cap', '17.0', 'qty_6_3', 'No size')">Add to Basket</button>
-</div>
-</div>
-<div class="item">
-<div>
-<h3>Calne RFC Performance Backpack</h3>
-<p></p><img alt="Calne RFC Performance Backpack" src="./images/calne_rfc_performance_backpack.png"/>
-<div class="item-price"><strong>Price: £23.00</strong></div>
-<label>Qty:
-              <input id="qty_6_4" min="1" type="number" value="0"/>
-</label>
-<button onclick="addToBasket('Calne RFC Performance Backpack', '23.0', 'qty_6_4', 'No size')">Add to Basket</button>
-</div>
-</div>
-<div class="button-nav-container"><button class="prev-btn" onclick="navigate(5)">Back</button><button class="review-order-btn" onclick="navigate('review')">Review Order</button></div></div>
-
-
-<div class="section" id="section-review" style="display:none">
-	<div class="section-header"><h2>Review Your Order</h2>
-		<p>Email: <strong><span id="reviewEmail"></span></strong>
-		<br/>Name: <strong><span id="reviewName"></span></strong></p>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta name="kit-allowance-limit" content="115">
+  <title>
+   Calne RFC Kit Order Form
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+  <link href="shirt-modal-style.css" rel="stylesheet"/>
+  <link href="kit-order-form-final-checks.css" rel="stylesheet">
+  </link>
+ </head>
+ <body>
+	<div class="section" id="start-screen" style="display:block">
+		<div class="section-header sticky-header">
+			<img alt="Club Logo" class="club-logo" src="./images/club_logo.png"/>
+			<h1 align="center">Calne Rugby 2025 Kit Order</h1>
+			<p><b>Welcome to the official Calne Rugby Club Kit Order Form.</b></p>
+			<p>To maintain a smart, unified appearance both on and off the field, all players are expected to wear the appropriate club kit for training sessions, match days, and team events. This form lists the essential items required as part of the standard player kit, along with optional extras for those who wish to top up or replace existing gear.</p>
+			<p>We’re pleased to offer this kit with the generous support of our club sponsors, who have made it possible for every player to receive <strong><span id="allowanceText">£120</span> worth of kit for free.</strong> This allowance will be applied automatically to your order.</p>
+			<p>If you wish to order additional kit beyond the sponsored <span id="allowanceTextRepeat">£120</span> allowance, you are more than welcome to do so. In this case, we will contact you directly to arrange payment <strong>before</strong> your order is placed.</p>
+			<p>Thank you for representing Calne Rugby with pride and professionalism.</p>
+		</div>
+		<div class="form-inputs">
+			<label for="fullName">Name:</label>
+			<input id="fullName" required="" type="text"/>
+			<br/>
+			<label for="email">Email:</label>
+			<input id="email" required="" type="email"/>
+			<br/>
+			<button class="start-order-btn" id="startButton">Start Order</button>
+		</div>
 	</div>
-	<div id="reviewBasket">Loading basket...</div>
-	<button class="prev-btn" onclick="navigate(currentSection)">Back</button><button class="prev-btn" id="submitOrderBtn" onclick="submitOrder()">Submit Order</button>
-</div>
+	
+	
+	<div class="section" id="section-0">
+		<div class="section-header">
+			<h2>Playing Kit</h2>
+			<p>As part of the standard match kit, all players are expected to have their own Calne Rugby shorts and socks. These items are essential for match days to ensure consistency, team identity, and compliance with club standards.
+			<br><br>Please ensure you include these items in your order if you do not already have them.</p>
+		</div>
+		<div class="item">
+			<div>
+				<h3>Calne RFC Elite Playing Shorts</h3>
+				<p></p>
+				<img alt="Calne RFC Elite Playing Shorts" src="./images/calne_rfc_elite_playing_shorts.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong> </div>
+				<label>Size:
+					<select id="size_0_0">
+						<option "="" value="30">30"</option>
+						<option "="" value="32">32"</option>
+						<option "="" value="34">34"</option>
+						<option "="" value="36">36"</option>
+						<option "="" value="38">38"</option>
+						<option "="" value="40">40"</option>
+						<option "="" value="42">42"</option>
+						<option "="" value="44">44"</option>
+						<option "="" value="46">46"</option>
+					</select>
+				</label>
+				<br>
+				<label>Qty:
+					<input id="qty_0_0" min="1" type="number" value="0"></input>
+				</label>
+				<button onclick="addToBasket('Calne RFC Elite Playing Shorts', '23.0', 'qty_0_0', 'size_0_0')">Add to Basket</button>
+				</br>
+			</div>
+		</div>
+		
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Playing Socks</h3>
+				<p></p>
+				<img alt="Calne RFC Playing Socks" src="./images/calne_rfc_playing_socks.png"/>
+				<div class="item-price"><strong>Price: £10.00</strong></div>
+				<label>Qty:
+					<input id="qty_0_1" min="1" type="number" value="0"></input>
+				</label>
+				<button onclick="addToBasket('Calne RFC Playing Socks', '10.0', 'qty_0_1', 'No size')">Add to Basket</button>
+			</div>
+		</div>
+		
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Elite PRO-FIT Playing Shirt</h3>
+				<p>Calne 2025/26 Elite PRO-FIT Playing Shirt (Tight fitting)
+				<br/><br/><b>Please note:</b> Shirt measurements provided are taken armpit-to-armpit, not the usual chest circumference. Please measure a similar shirt laid flat from armpit to armpit to select the correct size.  (Green arrow in the bottom corner)
+				<br/><br/>Here is a list of the shirt sizes purchased by the club to aid your decision:
+				<br/>4XL (Elite PRO-FIT): Number 17
+				<br/>3XL (Replica FIT): Numbers 1, 3, 16
+				<br/>3XL (Elite PRO-FIT): Numbers 5, 18
+				<br/>2XL (Elite PRO-FIT): Numbers 2, 4, 6, 8, 19, 20
+				<br/>XL (Elite PRO-FIT): Numbers 7, 11, 13, 21, 22, 23
+				<br/>L (Elite PRO-FIT): Numbers 10, 12, 14, 15, 24, 25
+				<br/>M (Elite PRO-FIT): Number 9</p>
+				<img alt="Calne RFC Elite PRO-FIT Playing Shirt" src="./images/calne_rfc_elite_pro-fit_playing_shirt.png"/>
+				<div class="item-price"><strong>Price: £37.50</strong></div>
+				<label> Size:
+					<select id="size_0_2">
+						<option value="XS (49.5cm)">XS (49.5cm)</option>
+						<option value="S (51cm)">S (51cm)</option>
+						<option value="M (54cm)">M (54cm)</option>
+						<option value="L (57cm)">L (57cm)</option>
+						<option value="XL (60cm)">XL (60cm)</option>
+						<option value="2XL (63cm)">2XL (63cm)</option>
+						<option value="3XL (66cm)">3XL (66cm)</option>
+						<option value="4XL (69cm)">4XL (69cm)</option>
+						<option value="5XL (72cm)">5XL (72cm)</option>
+						<option value="6XL (75cm)">6XL (75cm)</option>
+						<option value="7XL (78cm)">7XL (78cm)</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_0_2" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Elite PRO-FIT Playing Shirt', '37.5', 'qty_0_2', 'size_0_2')">Add to Basket</button>
+			</div>
+		</div>
+		
+		
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Replica FIT Playing Shirt</h3>
+				<p>Calne 2025/26 Elite PRO-FIT Playing Shirt (Tight fitting)
+				<br/><br/><b>Please note:</b> Shirt measurements provided are taken armpit-to-armpit, not the usual chest circumference. Please measure a similar shirt laid flat from armpit to armpit to select the correct size.  (Green arrow in the bottom corner)
+				<br/><br/>Here is a list of the shirt sizes purchased by the club to aid your decision:
+				<br/>4XL (Elite PRO-FIT): Number 17
+				<br/>3XL (Replica FIT): Numbers 1, 3, 16
+				<br/>3XL (Elite PRO-FIT): Numbers 5, 18
+				<br/>2XL (Elite PRO-FIT): Numbers 2, 4, 6, 8, 19, 20
+				<br/>XL (Elite PRO-FIT): Numbers 7, 11, 13, 21, 22, 23
+				<br/>L (Elite PRO-FIT): Numbers 10, 12, 14, 15, 24, 25
+				<br/>M (Elite PRO-FIT): Number 9</p>
+				<img alt="Calne RFC Replica FIT Playing Shirt" src="./images/calne_rfc_replica_fit_playing_shirt.png"/>
+				<div class="item-price"><strong>Price: £37.50</strong></div>
+				<label>Size:
+					<select id="size_0_3">
+						<option value="XS (42cm)">XS (42cm)</option>
+						<option value="S (45cm)">S (45cm)</option>
+						<option value="M (48cm)">M (48cm)</option>
+						<option value="L (49cm)">L (49cm)</option>
+						<option value="XL (51cm)">XL (51cm)</option>
+						<option value="2XL (53cm)">2XL (53cm)</option>
+						<option value="3XL (55cm)">3XL (55cm)</option>
+						<option value="4XL (57cm)">4XL (57cm)</option>
+						<option value="5XL (59cm)">5XL (59cm)</option>
+						<option value="6XL (61cm)">6XL (61cm)</option>
+						<option value="7XL (63cm)">7XL (63cm)</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_0_3" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Replica FIT Playing Shirt', '37.5', 'qty_0_3', 'size_0_3')">Add to Basket</button>			
+			</div>
+		</div>
+   
+   		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="next-btn" onclick="navigate(1)">Next</button>
+			</div>
+		</div>
+	</div>
+	
+
+	<div class="section" id="section-1">
+		<div class="section-header">
+			<h2>After Match</h2>
+			<p>All players are expected to wear the official after-match shirt following every home game. This is an important part of representing Calne Rugby Club both on and off the field.
+			<br/><br/>We’re proud to have <b>The Pewsham</b> as a key sponsor, whose generous support plays a vital role in the success of our club. Their logo is featured on the after-match shirts, wearing this shirt after home games is compulsory for all players.
+			<br/><br/>Please ensure you include one in your order if you do not already have one.</p>
+		</div>
+		<div class="item">
+			<div>
+				<h3>Calne RFC After-Match Shirt</h3>
+				<p></p>
+				<img alt="Calne RFC After-Match Shirt" src="./images/calne_rfc_after-match_shirt.png"/>
+				<div class="item-price"><strong>Price: £32.00</strong></div>
+				<label>Size:
+					<select id="size_1_0">
+						<option "="" value="13.5">13.5" Collar (32/34"Chest)</option>
+						<option "="" value="14">14" Collar (35"Chest)</option>
+						<option "="" value="14.5">14.5" Collar (36/38"Chest)</option>
+						<option "="" value="15">15" Collar (39"Chest)</option>
+						<option "="" value="15.5">15.5" Collar (40"Chest)</option>
+						<option "="" value="16">16" Collar (41"Chest)</option>
+						<option "="" value="16.5">16.5" Collar (42"Chest)</option>
+						<option "="" value="17">17" Collar (43"Chest)</option>
+						<option "="" value="17.5">17.5" Collar (44"Chest)</option>
+						<option "="" value="18">18" Collar (45"Chest)</option>
+						<option "="" value="18.5">18.5" Collar (46/48"Chest)</option>
+						<option "="" value="19">19" Collar (49"Chest)</option>
+						<option "="" value="19.5">19.5" Collar (50/52"Chest)</option>
+						<option "="" value="20">20" Collar (54/56"Chest)</option>
+						<option "="" value="21">21" Collar (58/60"Chest)</option>
+						<option "="" value="22">22" Collar (62/64"Chest)</option>
+						<option "="" value="23">23" Collar (66/68"Chest)</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_1_0" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC After-Match Shirt', '32.0', 'qty_1_0', 'size_1_0')">Add to Basket</button>
+			</div>
+		</div>   
+   
+		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="prev-btn" onclick="navigate(0)">Back</button>
+				 <button class="next-btn" onclick="navigate(2)">Next</button>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="section" id="section-2">
+		<div class="section-header">
+			<h2>Training Kit</h2>
+			<p>Our Calne Rugby training kit is designed to offer comfort and performance during all training sessions. This includes items such as training tops, shorts, and base layers — suitable for all levels and conditions.
+			<br/><br/>While the training kit is not compulsory, we encourage players to wear club-branded kit to training as it helps promote team identity and professionalism across the club.</p>
+		</div>
+		<div class="item">
+			<div>
+				<h3>Calne RFC Primus Smock</h3>
+				<p></p>
+				<img alt="Calne RFC Primus Smock" src="./images/calne_rfc_primus_smock.png"/>
+				<div class="item-price"><strong>Price: £28.00</strong></div>
+				<label>Size:
+					<select id="size_2_0">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+						<option value="5XL">5XL</option>
+						<option value="6XL">6XL</option>
+						<option value="7XL">7XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_2_0" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Primus Smock', '28.0', 'qty_2_0', 'size_2_0')">Add to Basket</button>
+			</div>
+		</div>
+		
+	   <div class="item">
+			<div>
+				<h3>Calne RFC Fortis Vest</h3>
+				<p>Stay Cool through those high energy sessions in the Fortis Training Vest.</p>
+				<img alt="Calne RFC Fortis Vest" src="./images/calne_rfc_fortis_vest.png"/>
+				<div class="item-price"><strong>Price: £20.00</strong></div>
+				<label>Size:
+					<select id="size_2_1">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_2_1" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Fortis Vest', '20.0', 'qty_2_1', 'size_2_1')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Fortis Tee</h3>
+				<p>Power on through those high, energy absorbing sessions in this training t-shirt.</p>
+				<img alt="Calne RFC Fortis Tee" src="./images/calne_rfc_fortis_tee.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong></div>
+				<label>Size:
+					<select id="size_2_2">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_2_2" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Fortis Tee', '23.0', 'qty_2_2', 'size_2_2')">Add to Basket</button>
+			</div>			
+		</div>   
+   
+		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="prev-btn" onclick="navigate(1)">Back</button>
+				 <button class="next-btn" onclick="navigate(3)">Next</button>
+			</div>
+		</div>		
+	</div>
+	
+	
+	
+	<div class="section" id="section-3">
+		<div class="section-header">
+			<h2>Leisure Wear</h2>
+			<p>Our range of Calne Rugby leisure wear is designed for comfort, style, and showing off your club pride outside of training and match days. This includes items such as hoodies, polos, tracksuit bottoms, and jackets — perfect for travelling to fixtures, relaxing post-match, or wearing around town.
+			<br/><br/>Leisure wear is entirely optional and not part of the compulsory kit, but it's a great way to look the part and feel part of the club community.</p>
+		</div>
+		<div class="item">
+			<div>
+				<h3>Calne RFC Fortis Polo</h3>
+				<p>Crafted with a folded collar and 2 button fastening placket, these tops feature short sleeves to give off that classic look.</p>
+				<img alt="Calne RFC Fortis Polo" src="./images/calne_rfc_fortis_polo.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong></div>
+				<label>Size:
+					<select id="size_3_0">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_3_0" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Fortis Polo', '23.0', 'qty_3_0', 'size_3_0')">Add to Basket</button>
+			</div>
+		</div>
+	
+		<div class="item">
+			<div>
+				<h3>Calne RFC Fortis Hoodie</h3>
+				<p>Comfort and warmth are key and this top provides both. Designed with a brushed fleece lining this hoodie is perfect for those colder training and travelling days.</p>
+				<img alt="Calne RFC Fortis Hoodie" src="./images/calne_rfc_fortis_hoodie.png"/>
+				<div class="item-price"><strong>Price: £39.00</strong></div>
+				<label>Size:
+					<select id="size_3_1">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_3_1" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Fortis Hoodie', '39.0', 'qty_3_1', 'size_3_1')">Add to Basket</button>
+			</div>
+		</div>
+	
+		<div class="item">
+			<div>
+				<h3>Calne RFC Fortis Quarter Zip Sweat</h3>
+				<p>Developed with wicking technology that sweeps sweat away from the skin, this quarter zip top is perfect for training or travelling in.</p>
+				<img alt="Calne RFC Fortis Quarter Zip Sweat" src="./images/calne_rfc_fortis_quarter_zip_sweat.png"/>
+				<div class="item-price"><strong>Price: £35.00</strong></div>
+				<label>Size:
+					<select id="size_3_2">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_3_2" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Fortis Quarter Zip Sweat', '35.0', 'qty_3_2', 'size_3_2')">Add to Basket</button>
+			</div>
+		</div>
+	
+		<div class="item">
+			<div>
+				<h3>Calne RFC NAVY Primus Quarter Zip</h3>
+				<p>The navy quarter zip is made from a soft, stretchy and breathable fabric, this multi-use 1/4 zip is both functional is use and professional in look. The navy quarter zip is the perfect Quarter Zip for off and on the field. The fabric hugs the body but allows for full, unrestricted movement.</p>
+				<img alt="Calne RFC NAVY Primus Quarter Zip" src="./images/calne_rfc_primus_quarter_zip.png"/>
+				<div class="item-price"><strong>Price: £32.00</strong></div>
+				<label>Size:
+					<select id="size_3_3">
+       					<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+						<option value="5XL">5XL</option>
+						<option value="6XL">6XL</option>
+						<option value="7XL">7XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_3_3" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC NAVY Primus Quarter Zip', '32.0', 'qty_3_3', 'size_3_3')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Royal Primus Quarter Zip</h3>
+				<p>The royal quarter zip is made from a soft, stretchy and breathable fabric, this multi-use 1/4 zip is both functional is use and professional in look. The royal quarter zip is the perfect Quarter Zip for off and on the field. The fabric hugs the body but allows for full, unrestricted movement.</p>
+				<img alt="Calne RFC Royal Primus Quarter Zip" src="./images/calne_rfc_royal_primus_quarter_zip.png"/>
+				<div class="item-price"><strong>Price: £32.00</strong></div>
+				<label>Size:
+					<select id="size_3_4">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+						<option value="5XL">5XL</option>
+						<option value="6XL">6XL</option>
+						<option value="7XL">7XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_3_4" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Royal Primus Quarter Zip', '32.0', 'qty_3_4', 'size_3_4')">Add to Basket</button>
+			</div>
+		</div>   
+   
+		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="prev-btn" onclick="navigate(2)">Back</button>
+				 <button class="next-btn" onclick="navigate(4)">Next</button>
+			</div>
+		</div>		
+	</div>
+	
+	
+	
+	<div class="section" id="section-4">
+		<div class="section-header">
+			<h2>Cold Weather</h2>
+			<p>The Cold Weather Kit includes optional items designed to keep players warm and comfortable during the winter months. This range may include thermal base layers, hats, snoods, and mid-layer tops — all suitable for training and warm-ups in colder conditions.
+			<br/><br/>While none of these items are compulsory, they are highly recommended to help players stay prepared and perform at their best throughout the season.</p>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Ventus Gilet</h3>
+				<p>The Ventus Gilet is our Spring/Autumn jacket designed to keep your core insulated when temperatures are slightly warmer.</p>
+				<img alt="Calne RFC Ventus Gilet" src="./images/calne_rfc_ventus_gilet.png"/>
+				<div class="item-price"><strong>Price: £50.00</strong></div>
+				<label>Size:
+					<select id="size_4_0">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_4_0" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Ventus Gilet', '50.0', 'qty_4_0', 'size_4_0')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Tempest Hybrid Jacket</h3>
+				<p>The Tempest hybrid jacket is our variable weather jacket designed to protect against the elements; keeping you warm and dry.</p>
+				<img alt="Calne RFC Tempest Hybrid Jacket" src="./images/calne_rfc_tempest_hybrid_jacket.png"/>
+				<div class="item-price"><strong>Price: £55.00</strong></div>
+				<label>Size:
+					<select id="size_4_1">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_4_1" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Tempest Hybrid Jacket', '55.0', 'qty_4_1', 'size_4_1')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Protego Waterproof Jacket</h3>
+				<p>The Tempest hybrid jacket is our variable weather jacket designed to protect against the elements; keeping you warm and dry.</p>
+				<img alt="Calne RFC Protego Waterproof Jacket" src="./images/calne_rfc_protego_waterproof_jacket.png"/>
+				<div class="item-price"><strong>Price: £90.00</strong></div>
+				<label>Size:
+					<select id="size_4_2">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_4_2" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Protego Waterproof Jacket', '90.0', 'qty_4_2', 'size_4_2')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Nero Managers Jacket</h3>
+				<p>Introducing the Nero Managers Jacket by VX3 –Crafted to keep you at the top of your game. This knee-length jacket boasts unparalleled technical features. Stay dry and comfortable with its fully waterproof design, while the integrated insulation ensures warmth even in the harshest conditions.</p>
+				<img alt="Calne RFC Nero Managers Jacket" src="./images/calne_rfc_nero_managers_jacket.png"/>
+				<div class="item-price"><strong>Price: £100.00</strong></div>
+				<label>Size:
+					<select id="size_4_3">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_4_3" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Nero Managers Jacket', '100.0', 'qty_4_3', 'size_4_3')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Protego Waterproof Trousers</h3>
+				<p>These trousers are lightweight and pack down easily to fit into your kit bag making it convenient to always keep with you. The thigh length side zips make putting them on quick and easy. This product goes perfectly with our Protego Jacket so you can stay dry from head to toe.</p>
+				<img alt="Calne RFC Protego Waterproof Trousers" src="./images/calne_rfc_protego_waterproof_trousers.png"/>
+				<div class="item-price"><strong>Price: £35.00</strong></div>
+				<label>Size:
+					<select id="size_4_4">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_4_4" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Protego Waterproof Trousers', '35.0', 'qty_4_4', 'size_4_4')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Duro Elite Sports Robe</h3>
+				<p>The robe is oversized so that athletes can comfortably change within it – if you are using the Sports Robe for purely recreational purposes, please select a size down from the recommended size.
+				<br/><br/>For any athlete operating outdoors, The Duro Sports Robe is a must have.
+				<br/><br/>From open-water swimmers coming out of the water, to players coming off the pitch, slipping into the Duro Sports Robe is quickest way to get warm and dry.</p>
+				<img alt="Calne RFC Duro Elite Sports Robe" src="./images/calne_rfc_duro_elite_sports_robe.png"/>
+				<div class="item-price"><strong>Price: £115.00</strong></div>
+				<label>Size:
+					<select id="size_4_5">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_4_5" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Duro Elite Sports Robe', '115.0', 'qty_4_5', 'size_4_5')">Add to Basket</button>
+			</div>
+		</div>
+   
+		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="prev-btn" onclick="navigate(3)">Back</button>
+				 <button class="next-btn" onclick="navigate(5)">Next</button>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="section" id="section-5">
+		<div class="section-header">
+			<h2>Gym Shorts and Leggings</h2>
+			<p>This section includes gym shorts and leggings designed for strength &amp; conditioning sessions, indoor training, and general fitness work. These items are made for flexibility, comfort, and support during high-movement activities.
+			<br/><br/>While not compulsory, they are a popular choice among players who regularly take part in gym sessions or want versatile training gear to complement their rugby kit.</p>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Majester Training Short</h3>
+				<p>A day to day practical short that can be used on the training field as well as the classroom. Our breathable, crease resistant ProFIT fabric is smart and functional with zip pockets perfect for keeping your valuables safe.</p>
+				<img alt="Calne RFC Majester Training Short" src="./images/calne_rfc_majester_training_short.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong></div>
+				<label>Size:
+					<select id="size_5_0">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_5_0" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Majester Training Short', '23.0', 'qty_5_0', 'size_5_0')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Primus Travel Short</h3>
+				<p>These breathable shorts will keep the wearer cool and dry as the workout gets harder and higher in intensity. In a regular fit, these shorts are a comfortable balance between loose and snug. They come with 2 pockets and an adjustable elastic drawcord waistband which provides the perfect fit.</p>
+				<img alt="Calne RFC Primus Travel Short" src="./images/calne_rfc_primus_travel_short.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong></div>
+				<label>Size:
+					<select id="size_5_1">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_5_1" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Primus Travel Short', '23.0', 'qty_5_1', 'size_5_1')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Ludus Gym Shorts</h3>
+				<p>Our lightweight, breathable ProFIT fabric makes for a comfortable and ultra-functional short. This design is more fitted than the other shorts in our range.</p>
+				<img alt="Calne RFC Ludus Gym Shorts" src="./images/calne_rfc_ludus_gym_shorts.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong></div>
+				<label>Size:
+					<select id="size_5_2">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_5_2" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Ludus Gym Shorts', '23.0', 'qty_5_2', 'size_5_2')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Braca Trackpant</h3>
+				<p>A modern, tapered fit for the classic track pant. This 2-layer track pant is a must for training and match days.
+				<br/><br/>The inner lining is a combination of a soft cotton upper with a silky nylon from the knee down. The outer is our lightweight but durable ProFIT material which helps to retain warmth but allow breathability.</p>
+				<img alt="Calne RFC Braca Trackpant" src="./images/calne_rfc_braca_trackpant.png"/>
+				<div class="item-price"><strong>Price: £37.00</strong></div>
+				<label>Size:
+					<select id="size_5_3">
+						<option value="XS">XS</option>
+						<option value="S">S</option>
+						<option value="M">M</option>
+						<option value="L">L</option>
+						<option value="XL">XL</option>
+						<option value="2XL">2XL</option>
+						<option value="3XL">3XL</option>
+						<option value="4XL">4XL</option>
+					</select>
+				</label>
+				<br/>
+				<label>Qty:
+					<input id="qty_5_3" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Braca Trackpant', '37.0', 'qty_5_3', 'size_5_3')">Add to Basket</button>
+			</div>
+		</div>
+   
+		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="prev-btn" onclick="navigate(4)">Back</button>
+				 <button class="next-btn" onclick="navigate(6)">Next</button>
+			</div>
+		</div>
+	</div>
+	
+	
+	
+	<div class="section" id="section-6">
+		<div class="section-header">
+			<h2>Extras</h2>
+			<p>This section includes a selection of useful extras to complete your kit. Items such as the Calne Rugby kit bag and club beanie hats are available for those who want practical and stylish additions to their rugby gear.
+			<br/><br/>These items are optional, but they’re great for keeping your kit organised and staying warm on the sidelines or around town.</p>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Performance Kit Bag</h3>
+				<p></p>
+				<img alt="Calne RFC Performance Kit Bag" src="./images/calne_rfc_performance_kit_bag.png"/>
+				<div class="item-price"><strong>Price: £30.00</strong></div>
+				<label>Qty:
+					<input id="qty_6_0" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Performance Kit Bag', '30.0', 'qty_6_0', 'No size')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Odd Ball Beanie</h3>
+				<p></p>
+				<img alt="Calne RFC Odd Ball Beanie" src="./images/calne_rfc_odd_ball_beanie.png"/>
+				<div class="item-price"><strong>Price: £15.00</strong></div>
+				<label>Qty:
+					<input id="qty_6_1" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Odd Ball Beanie', '15.0', 'qty_6_1', 'No size')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Trucker Cap</h3>
+				<p></p>
+				<img alt="Calne RFC Trucker Cap" src="./images/calne_rfc_trucker_cap.png"/>
+				<div class="item-price"><strong>Price: £17.00</strong></div>
+				<label>Qty:
+					<input id="qty_6_2" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Trucker Cap', '17.0', 'qty_6_2', 'No size')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Classic Cap</h3>
+				<p></p>
+				<img alt="Calne RFC Classic Cap" src="./images/calne_rfc_classic_cap.png"/>
+				<div class="item-price"><strong>Price: £17.00</strong></div>
+				<label>Qty:
+					<input id="qty_6_3" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Classic Cap', '17.0', 'qty_6_3', 'No size')">Add to Basket</button>
+			</div>
+		</div>
+		
+		<div class="item">
+			<div>
+				<h3>Calne RFC Performance Backpack</h3>
+				<p></p>
+				<img alt="Calne RFC Performance Backpack" src="./images/calne_rfc_performance_backpack.png"/>
+				<div class="item-price"><strong>Price: £23.00</strong></div>
+				<label>Qty:
+					<input id="qty_6_4" min="1" type="number" value="0"/>
+				</label>
+				<button onclick="addToBasket('Calne RFC Performance Backpack', '23.0', 'qty_6_4', 'No size')">Add to Basket</button>
+			</div>
+		</div>
+
+		<div class="button-nav-container">
+			<div class="button-row">
+				<button class="prev-btn" onclick="navigate(5)">Back</button>
+				<button class="review-order-btn" onclick="navigate('review')">Review Order</button>
+			</div>
+		</div>    
+	</div>
 
 
 
+	<div class="section" id="section-review" style="display:none">
+		<div class="section-header">
+			<h2>Review Your Order</h2>
+			<p>Email: <strong><span id="reviewEmail"></span></strong><br/>Name: <strong><span id="reviewName"></span></strong></p>
+		</div>
+		<div id="reviewBasket">Loading basket...</div>
+		<button class="prev-btn" onclick="navigate(currentSection)">Back</button>
+		<button class="prev-btn" id="submitOrderBtn" onclick="submitOrder()">Submit Order</button>
+	</div>
 
-<div id="basket-panel" style="display: none;">
-  <h3>Your Basket</h3>
-  <ul id="basketList"></ul>
-  <div class="basket-line"><strong>Subtotal:</strong> £<span id="subtotalAmount">0.00</span></div>
-  <div class="basket-line" style="color: green;"><strong><span id="kitAllowanceValue">£0.00</span> Club Allowance:</strong> -£<span id="discountAmount">0.00</span></div>
-  <div class="basket-total"><strong>Total to Pay:</strong> £<span id="totalAmount">0.00</span></div>
-</div>
 
 
-<script>
-let currentSection = -1;
-const basketItems = [];
+	<div class="section" id="basket-panel" style="display: none;">
+		<h3>Your Basket</h3>
+		<ul id="basketList"></ul>
+		<div class="basket-line"><strong>Subtotal: </strong>£<span id="subtotalAmount">0.00</span></div>
+		<div class="basket-line" style="color: green;"><strong><span id="kitAllowanceValue">£0.00</span> Club Allowance: </strong>-£<span id="discountAmount">0.00</span></div>
+		<div class="basket-total"><strong>Total to Pay: </strong>£<span id="totalAmount">0.00</span></div>
+	</div>
+	
+	
+	<div class="section" id="section-thankyou" style="display:none">
+		<div class="section-header">
+			<h2>Order Summary (Test Only)</h2>
+			<p style="color: red; font-weight: bold;">This is a <u>test confirmation page</u>. No order has been submitted.</p>
+		</div>
+		<div class="summary-box">
+			<p><strong>Name:</strong> <span id="summaryName"></span></p>
+			<p><strong>Email:</strong> <span id="summaryEmail"></span></p>
+			<p><strong>Club Allowance Used:</strong> £<span id="summaryAllowanceUsed"></span></p>
+			<p><strong>Total to Pay:</strong> £<span id="summaryToPay"></span></p>
+			<p id="summaryMessage" style="font-weight: bold;"></p>
+		</div>
+	</div>
+	
+	
+	<div class="modal" id="shirtModal">
+		<div class="modal-content">
+			<span class="close-button" onclick="closeModal()">×</span>
+			<h2>Shirt Customisation</h2>
+			<label for="shirtNumber"><strong>Shirt Number</strong><span class="required">*</span></label>
+			<p class="modal-instructions">Please consider both your likely playing position when selecting a number for your own shirt.
+			<br/><br/>Only one of each number is allowed on the pitch, and the player selected in that numbered position gets first refusal on wearing it.</p>
+			<input id="shirtNumber" placeholder="e.g. 7" type="number"/>
+			<br/><br/>
+			<label for="shirtName"><strong>Display Name on Shirt</strong></label>
+			<p class="modal-instructions">Specify what name, ideally your surname, you want on your shirt.
+			<br/><br/>Offensive names will be not allowed </p>
+			<input id="shirtName" placeholder="e.g. BROWN" type="text"/>
+			<br/>
+			<br/><button onclick="saveShirtDetails()">Save &amp; Continue</button>
+		</div>
+	</div>
+	
+	
+	<div class="modal" id="initialsModal">
+		<div class="modal-content">
+			<span class="close-button" onclick="closeInitialsModal()">×</span>
+			<h2>Initial Customisation</h2>
+			<p>Please enter your initials for the selected item.</p>
+			<input id="itemInitials" placeholder="e.g. PB" maxlength="3"  type="text"/>
+			<br/><br/>
+			<button onclick="saveInitialsDetails()">Save &amp; Continue</button>
+		</div>
+	</div>
+	
+
+  
+  <script>
+	let currentSection = -1;
+	const basketItems = [];	
+	let kitAllowanceLimit;
+
+// Get from URL or meta tag
+const params = new URLSearchParams(window.location.search);
+const urlAllowance = parseFloat(params.get("kitallowance"));
+
+if (!isNaN(urlAllowance)) {
+	kitAllowanceLimit = urlAllowance;
+} else {
+	kitAllowanceLimit = parseFloat(document.querySelector('meta[name="kit-allowance-limit"]').content);
+}
 
 window.addEventListener('DOMContentLoaded', () => {
-  const params = new URLSearchParams(window.location.search);
-  const name = params.get('name');
+	const name = params.get('name');
+	const email = params.get('email');
+	
+	if (name) {
+		document.getElementById('fullName').value = decodeURIComponent(name.replace(/\+/g, ' '));
+	}
+	
+	if (email) {
+		document.getElementById('email').value = decodeURIComponent(email);
+	}
 
-  if (name) {
-    document.getElementById('fullName').value = decodeURIComponent(name.replace(/\+/g, ' '));
-  }
+	const allowanceEls = document.querySelectorAll("#allowanceText, #allowanceTextRepeat");
+	allowanceEls.forEach(el => {
+		el.textContent = `£${kitAllowanceLimit}`;
+	});
+	
+	const sections = document.querySelectorAll(".section:not(#start-screen):not(#section-review):not(#section-submitted):not(#basket-panel):not(#section-thankyou)");
+	const total = sections.length;
+
+	sections.forEach((section, index) => {
+		const pageText = `Page ${index + 1} of ${total}`;
+
+		// Insert at the top
+		const topIndicator = document.createElement("div");
+		topIndicator.className = "top-page-indicator";
+		topIndicator.textContent = pageText;
+		section.insertBefore(topIndicator, section.firstChild);
+
+		// Append below navigation buttons
+		const navButtons = section.querySelector(".button-nav-container");
+		if (navButtons) {
+		const bottomIndicator = document.createElement("div");
+		bottomIndicator.className = "bottom-page-indicator";
+		bottomIndicator.textContent = pageText;
+		navButtons.appendChild(bottomIndicator);
+		}
+	});
 });
+
 
 function startOrder() {
   const name = document.getElementById("fullName").value.trim();
@@ -565,21 +1021,40 @@ function navigate(sectionId) {
   currentSection = sectionId;
 }
 
+
 function addToBasket(title, price, qtyId, sizeId) {
   const qty = parseInt(document.getElementById(qtyId).value);
   const size = sizeId === 'No size' ? 'No size' : document.getElementById(sizeId).value;
   const parsedPrice = parseFloat(price.toString().replace(/[^0-9.]/g, ""));
   if (!qty || qty <= 0 || isNaN(parsedPrice)) return;
+
   const subtotal = qty * parsedPrice;
   const item = { title, size, qty, price: parsedPrice, subtotal };
-  basketItems.push(item);
-  document.getElementById(qtyId).value = 0;
-  renderBasket();
-  
-  if (title.includes("Playing Shirt")) {
-    promptShirtCustomisation(title);
+
+  // Show initials prompt for certain items
+  if (title.includes("After-Match Shirt") || title.includes("Playing Shorts")) {
+    currentCustomItem = item;
+    document.getElementById("itemInitials").value = "";
+    document.getElementById("initialsModal").style.display = "block";
+    return;
   }
+
+  // Show customisation modal for playing shirts
+  if (title.includes("Playing Shirt")) {
+    promptShirtCustomisation(title); // this handles adding
+    return;
+  }
+
+  actuallyAddToBasket(item);
+  document.getElementById(qtyId).value = 0;
 }
+
+function actuallyAddToBasket(item) {
+  basketItems.push(item);
+  renderBasket();
+}
+
+
 
 
 let kitAllowance = 0;
@@ -595,10 +1070,10 @@ async function checkMembership(name) {
   const result = await response.json();
   const used = parseFloat(result.receivedKit || "0");
 
-  if (result.memberFound && used < 120) {
-    kitAllowance = 120 - used;
+  if (result.memberFound && used < kitAllowanceLimit) {
+    kitAllowance = kitAllowanceLimit - used;
     kitAllowanceUsed = false;
-  } else if (result.memberFound && used >= 120) {
+  } else if (result.memberFound && used >= kitAllowanceLimit) {
     kitAllowance = 0;
     kitAllowanceUsed = true;
   } else {
@@ -623,8 +1098,8 @@ function renderBasket() {
     subtotal += itemTotal;
 
     const li = document.createElement("li");
-    li.innerHTML = `${item.qty} x ${item.title} (${item.size}) - £${itemTotal.toFixed(2)} <button onclick="removeFromBasket(${index})">Remove</button>`;
-    basketList.appendChild(li);
+    li.innerHTML = `${item.qty} x ${item.title} (${item.size})${item.initials ? ` - Initials: ${item.initials}` : ""} - £${itemTotal.toFixed(2)} <button onclick="removeFromBasket(${index})">Remove</button>`;
+	basketList.appendChild(li);
   });
 
   const discount = Math.min(kitAllowance, subtotal);
@@ -641,8 +1116,6 @@ function renderBasket() {
 
   totalElement.textContent = finalTotal.toFixed(2);
 }
-
-
 
 
 function renderReviewBasket() {
@@ -664,8 +1137,8 @@ function renderReviewBasket() {
     const subtotal = item.qty * item.price;
     total += subtotal;
     const li = document.createElement("li");
-    li.innerHTML = `${item.qty} x ${item.title} (${item.size}) - £${subtotal.toFixed(2)} <button onclick="removeFromBasket(${index}); renderReviewBasket(); renderBasket();">Remove</button>`;
-    ul.appendChild(li);
+    li.innerHTML = `${item.qty} x ${item.title} (${item.size})${item.initials ? ` - Initials: ${item.initials}` : ""} - £${subtotal.toFixed(2)} <button onclick="removeFromBasket(${index}); renderReviewBasket(); renderBasket();">Remove</button>`;
+	ul.appendChild(li);
   });
 
   container.appendChild(ul);
@@ -729,7 +1202,7 @@ function removeFromBasket(index) {
 
 // bind startOrder after DOM is ready
 document.addEventListener("DOMContentLoaded", function() {
-  document.getElementById("startButton").onclick = startOrder;
+	document.getElementById("startButton").onclick = startOrder;
 });
 
 
@@ -756,45 +1229,8 @@ function submitOrder() {
 
   document.getElementById("summaryMessage").textContent = msg;
 }
+  </script>
 
-</script>
-
-<div id="shirtModal" class="modal">
-  <div class="modal-content">
-    <span class="close-button" onclick="closeModal()">&times;</span>
-    <h2>Shirt Customisation</h2>
-	<label for="shirtNumber"><strong>Shirt Number</strong> <span class="required">*</span></label>
-    <p class="modal-instructions">Please consider both your likely playing position when selecting a number for your own shirt.
-	<br/><br/>Only one of each number is allowed on the pitch, and the player selected in that numbered position gets first refusal on wearing it.</p>    
-    <input type="number" id="shirtNumber" placeholder="e.g. 7" />
-	<br/><br/>
-	<label for="shirtName"><strong>Display Name on Shirt</strong></label>
-    <p class="modal-instructions">Specify what name, ideally your surname, you want on your shirt. 
-	<br/><br/>Offensive names will be not allowed</p>
-    <input type="text" id="shirtName" placeholder="e.g. BROWN" />
-    <br/><br/>
-    <button onclick="saveShirtDetails()">Save & Continue</button>
-  </div>
-</div>
-
-
-<div class="section" id="section-thankyou" style="display:none">
-  <div class="section-header">
-    <h2>Order Summary (Test Only)</h2>
-    <p style="color: red; font-weight: bold;">
-      This is a <u>test confirmation page</u>. No order has been submitted.
-    </p>
-  </div>
-  <div class="summary-box">
-    <p><strong>Name:</strong> <span id="summaryName"></span></p>
-    <p><strong>Email:</strong> <span id="summaryEmail"></span></p>
-    <p><strong>Club Allowance Used:</strong> £<span id="summaryAllowanceUsed"></span></p>
-    <p><strong>Total to Pay:</strong> £<span id="summaryToPay"></span></p>
-    <p id="summaryMessage" style="font-weight: bold;"></p>
-  </div>
-</div>
-
-<script src="shirt-modal-script.js"></script>
-
-</body>
+  <script src="shirt-modal-script.js"></script>
+ </body>
 </html>
