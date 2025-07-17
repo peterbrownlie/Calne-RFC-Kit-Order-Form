@@ -334,3 +334,44 @@ button.review-order-btn:hover {
   }
 }
 
+.tab-navigation {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden; /* prevents scrollbar */
+}
+
+.tab-btn {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.4rem 0.2rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  transition: background-color 0.2s ease;
+}
+
+.tab-btn:hover,
+.tab-btn.active {
+  background-color: #007bff;
+  color: #fff;
+  border-color: #007bff;
+}
+
+@media screen and (max-width: 600px) {
+  .tab-btn {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.2rem;
+  }
+}

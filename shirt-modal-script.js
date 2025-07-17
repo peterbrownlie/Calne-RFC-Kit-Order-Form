@@ -1,45 +1,42 @@
+let currentCustomItem = null;
 
-// Show modal when specific shirts are added
-function promptShirtCustomisation(itemName) {
-  if (itemName.toLowerCase().includes("playing shirt")) {
-    document.getElementById("shirtModal").style.display = "block";
-    window.currentShirtItem = itemName;
-  }
+// Called from addToBasket() if item is a Playing Shirt
+function promptShirtCustomisation(item) {
+  currentCustomItem = item;
+  document.getElementById("shirtModal").style.display = "block";
+  document.getElementById("shirtNumber").value = "";
+  document.getElementById("shirtName").value = "";
 }
 
-// Close modal
-function closeModal() {
-  document.getElementById("shirtModal").style.display = "none";
-}
-
-// Save entered details
 function saveShirtDetails() {
   const number = document.getElementById("shirtNumber").value.trim();
   const name = document.getElementById("shirtName").value.trim();
 
-  if (!number) {
-    alert("Please enter a shirt number.");
+  if (!number || !name) {
+    alert("Please enter both number and name.");
     return;
   }
 
-  const customisation = {
-    number,
-    name
-  };
+  currentCustomItem.shirtNumber = number;
+  currentCustomItem.shirtName = name;
+  currentCustomItem.subtotal = currentCustomItem.qty * currentCustomItem.price;
 
-  console.log("Customisation for:", window.currentShirtItem, customisation);
+  basketItems.push(currentCustomItem);
+  renderBasket();
+  currentCustomItem = null;
+
   closeModal();
 }
 
-let currentCustomItem = null;
-
-function promptInitialsCustomisation(itemName) {
-  currentCustomItem = basketItems[basketItems.length - 1]; // last added
-  document.getElementById("initialsModal").style.display = "block";
+function closeModal() {
+  document.getElementById("shirtModal").style.display = "none";
 }
 
-function closeInitialsModal() {
-  document.getElementById("initialsModal").style.display = "none";
+// Called from addToBasket() if item is After-Match Shirt or Playing Shorts
+function promptInitialsCustomisation(item) {
+  currentCustomItem = item;
+  document.getElementById("initialsModal").style.display = "block";
+  document.getElementById("itemInitials").value = "";
 }
 
 function saveInitialsDetails() {
@@ -47,10 +44,15 @@ function saveInitialsDetails() {
   if (initials) {
     currentCustomItem.initials = initials;
   }
-  document.getElementById("initialsModal").style.display = "none";
-  actuallyAddToBasket(currentCustomItem);
+
+  currentCustomItem.subtotal = currentCustomItem.qty * currentCustomItem.price;
+  basketItems.push(currentCustomItem);
+  renderBasket();
+
   currentCustomItem = null;
+  closeInitialsModal();
 }
 
-
-
+function closeInitialsModal() {
+  document.getElementById("initialsModal").style.display = "none";
+}
