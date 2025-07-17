@@ -1245,18 +1245,27 @@ function renderReviewBasket() {
   }
 
   const ul = document.createElement("ul");
-  let total = 0;
+  let subtotal = 0;
 
   basketItems.forEach((item, index) => {
-    const subtotal = item.qty * item.price;
-    total += subtotal;
+    const itemSubtotal = item.qty * item.price;
+    subtotal += itemSubtotal;
     const li = document.createElement("li");
-    li.innerHTML = `${item.qty} x ${item.title} (${item.size})${item.initials ? ` - Initials: ${item.initials}` : ""} - £${subtotal.toFixed(2)} <button onclick="removeFromBasket(${index}); renderReviewBasket(); renderBasket();">Remove</button>`;
-	ul.appendChild(li);
+    li.innerHTML = `${item.qty} x ${item.title} (${item.size})${item.initials ? ` - Initials: ${item.initials}` : ""}${item.nameOnBack ? ` - Name: ${item.nameOnBack}` : ""}${item.numberOnBack ? ` - Number: ${item.numberOnBack}` : ""} - £${itemSubtotal.toFixed(2)} <button onclick="removeFromBasket(${index}); renderReviewBasket(); renderBasket();">Remove</button>`;
+    ul.appendChild(li);
   });
 
+  const discount = Math.min(kitAllowance, subtotal);
+  const totalToPay = subtotal - discount;
+
   container.appendChild(ul);
-  container.innerHTML += `<p><strong>Total: £${total.toFixed(2)}</strong></p>`;
+
+  // Add full total breakdown
+  container.innerHTML += `
+    <p><strong>Subtotal:</strong> £${subtotal.toFixed(2)}<br/>
+    <span style="color: green;"><strong>Club Allowance:</strong> £${discount.toFixed(2)}</span><br/>
+    <strong>Total to Pay:</strong> £${totalToPay.toFixed(2)}</p>
+  `;
 
   // Required item logic
   const missingShorts = !basketItems.some(item => item.title.toLowerCase().includes("playing shorts"));
@@ -1268,14 +1277,14 @@ function renderReviewBasket() {
 
     if (missingShorts) {
       warningDiv.innerHTML += `
-        <p>⚠️ You have not selected <strong> Playing Shorts</strong>.</p>
+        <p>⚠️ You have not selected <strong>Playing Shorts</strong>.</p>
         <label><input type="checkbox" id="confirmShorts"> I confirm I already own a pair.</label>
       `;
     }
 
     if (missingAftermatch) {
       warningDiv.innerHTML += `
-        <p>⚠️ You have not selected an <strong> Aftermatch Shirt</strong>.</p>
+        <p>⚠️ You have not selected an <strong>Aftermatch Shirt</strong>.</p>
         <label><input type="checkbox" id="confirmAftermatch"> I confirm I already own one.</label>
       `;
     }
@@ -1305,6 +1314,7 @@ function renderReviewBasket() {
     validateConfirmations();
   }, 100); // short delay to allow DOM insert
 }
+
 
 
 
