@@ -277,8 +277,12 @@ function renderBasket() {
 	if (item.initials) {
 	  itemDetails += ` - Initials: ${item.initials.toUpperCase()}`;
 	}
-	if (item.shirtNumber && item.shirtName) {
-	  itemDetails += ` - No: ${item.shirtNumber}, Name: ${item.shirtName.toUpperCase()}`;
+	
+	if (item.shirtNumber) {
+		itemDetails += ` - No: ${item.shirtNumber}`;		
+		if (item.shirtName) {
+			itemDetails += `, Name: ${item.shirtName.toUpperCase()}`;
+		}
 	}
 
 	li.innerHTML = `${itemDetails} - £${itemTotal.toFixed(2)} <button onclick="removeFromBasket(${index})">Remove</button>`;
