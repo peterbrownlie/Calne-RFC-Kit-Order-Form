@@ -35,26 +35,30 @@ window.addEventListener('DOMContentLoaded', () => {
 	});
 	
 	if (paymentStatus === "success") {
-		// attempt to retrieve previous order info
-		const fullName = document.getElementById("fullName").value;
-		const email = document.getElementById("email").value;
+		const alreadySubmitted = sessionStorage.getItem("hasSubmitted");
+		const savedOrder = sessionStorage.getItem("orderData");
 
-		// Rebuild orderData from localStorage or session if needed
-		const orderData = JSON.parse(sessionStorage.getItem("orderData"));
-		if (orderData) {
-			submitToPowerAutomate(orderData).then((result) => {
-				if (result.success) {
-					showSection("section-order-success");
-				} else {
-					showFailure(result.error || "Payment succeeded but order submission failed.");
-				}
-			});
-		} else {
-			showFailure("Payment succeeded but order details were lost. Please contact support.");
+		if (alreadySubmitted || !savedOrder) {
+			// Prevent duplicate or missing submission
+			return;
 		}
+
+		const orderData = JSON.parse(savedOrder);
+
+		submitToPowerAutomate(orderData).then((result) => {
+		document.getElementById("processingOverlay").style.display = "none";
+
+		if (result.success) {
+				sessionStorage.setItem("hasSubmitted", "true");
+				showSection("section-order-success");
+			} else {
+				showFailure(result.error || "Payment succeeded but order submission failed.");
+			}
+		});
 	}
 	
 	if (paymentStatus === "cancel") {
+		sessionStorage.removeItem("hasSubmitted");
 		hideAllSections();
 		document.getElementById("section-order-failure").style.display = "block";
 		if (document.getElementById("basket-panel")) {
@@ -442,6 +446,7 @@ async function submitOrder() {
 		document.getElementById("processingOverlay").style.display = "none";
 
 		if (result.success) {
+			sessionStorage.setItem("hasSubmitted", "true");
 			showSection("section-order-success");
 		} else {
 			showFailure(result.error || "An unknown error occurred submitting your order.");
@@ -527,13 +532,8 @@ function showFailure(message) {
 }
 
 function startNewOrder() {
-  // Remove payment status from URL
-  window.history.replaceState(null, "", window.location.pathname);
-
-  // Clear saved session data
   sessionStorage.clear();
-
-  // Reload the page (now clean)
+  window.history.replaceState(null, "", window.location.pathname);
   location.reload();
 }
 
