@@ -12,7 +12,7 @@ function saveShirtDetails() {
   const number = document.getElementById("shirtNumber").value.trim().toUpperCase();
   const name = document.getElementById("shirtName").value.trim().toUpperCase();
 
-  if (!number || !name) {
+  if (!number) {
     alert("Please enter both number and name.");
     return;
   }
