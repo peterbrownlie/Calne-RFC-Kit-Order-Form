@@ -526,6 +526,17 @@ function showFailure(message) {
   document.getElementById("processingOverlay").style.display = "none";
 }
 
+function startNewOrder() {
+  // Remove payment status from URL
+  window.history.replaceState(null, "", window.location.pathname);
+
+  // Clear saved session data
+  sessionStorage.clear();
+
+  // Reload the page (now clean)
+  location.reload();
+}
+
 
   
 
