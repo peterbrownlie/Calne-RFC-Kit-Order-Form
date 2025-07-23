@@ -9,8 +9,8 @@ function promptShirtCustomisation(item) {
 }
 
 function saveShirtDetails() {
-  const number = document.getElementById("shirtNumber").value.trim();
-  const name = document.getElementById("shirtName").value.trim();
+  const number = document.getElementById("shirtNumber").value.trim().toUpperCase();
+  const name = document.getElementById("shirtName").value.trim().toUpperCase();
 
   if (!number || !name) {
     alert("Please enter both number and name.");
@@ -40,7 +40,7 @@ function promptInitialsCustomisation(item) {
 }
 
 function saveInitialsDetails() {
-  const initials = document.getElementById("itemInitials").value.trim();
+  const initials = document.getElementById("itemInitials").value.trim().toUpperCase();
   if (initials) {
     currentCustomItem.initials = initials;
   }

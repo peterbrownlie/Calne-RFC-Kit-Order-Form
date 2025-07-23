@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta name="kit-allowance-limit" content="120">
-  <title>
-   Calne RFC Kit Order Form
-  </title>
-  <link href="style.css" rel="stylesheet"/>
-  <link href="shirt-modal-style.css" rel="stylesheet"/>
-  <link href="kit-order-form-final-checks.css" rel="stylesheet">
-  </link>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta name="kit-allowance-limit" content="120">
+	<title>Calne RFC Kit Order Form</title>
+	
+	<link href="style.css" rel="stylesheet"/>
+	<link href="shirt-modal-style.css" rel="stylesheet"/>
+	<link href="kit-order-form-final-checks.css" rel="stylesheet">
+	<script src="shirt-modal-script.js"></script>
+	<script src="full_script_extracted.js"></script>
  </head>
  <body>
 	<div class="section" id="start-screen" style="display:block">
 		<div class="section-header sticky-header">
 			<img alt="Club Logo" class="club-logo" src="./images/club_logo.png"/>
-			<h1 align="center">Calne Rugby 2025 Kit Order</h1>
-			<p><b>Welcome to the official Calne Rugby Club Kit Order Form.</b></p>
+			<h1 align="center">Calne Rugby Club Kit Order Form.</h1>
 			<p>To maintain a smart, unified appearance both on and off the field, all players are expected to wear the appropriate club kit for training sessions, match days, and team events. This form lists the essential items required as part of the standard player kit, along with optional extras for those who wish to top up or replace existing gear.</p>
 			<p>We’re pleased to offer this kit with the generous support of our club sponsors, who have made it possible for every player to receive <strong><span id="allowanceText">£120</span> worth of kit for free.</strong> This allowance will be applied automatically to your order.</p>
 			<p>If you wish to order additional kit beyond the sponsored <span id="allowanceTextRepeat">£120</span> allowance, you are more than welcome to do so. In this case, we will contact you directly to arrange payment <strong>before</strong> your order is placed.</p>
@@ -113,17 +112,17 @@
 				<div class="item-price"><strong>Price: £37.50</strong></div>
 				<label> Size:
 					<select id="size_0_2">
-						<option value="XS (49.5cm)">XS (49.5cm)</option>
-						<option value="S (51cm)">S (51cm)</option>
-						<option value="M (54cm)">M (54cm)</option>
-						<option value="L (57cm)">L (57cm)</option>
-						<option value="XL (60cm)">XL (60cm)</option>
-						<option value="2XL (63cm)">2XL (63cm)</option>
-						<option value="3XL (66cm)">3XL (66cm)</option>
-						<option value="4XL (69cm)">4XL (69cm)</option>
-						<option value="5XL (72cm)">5XL (72cm)</option>
-						<option value="6XL (75cm)">6XL (75cm)</option>
-						<option value="7XL (78cm)">7XL (78cm)</option>
+						<option value="XS">XS (49.5cm)</option>
+						<option value="S">S (51cm)</option>
+						<option value="M">M (54cm)</option>
+						<option value="L">L (57cm)</option>
+						<option value="XL">XL (60cm)</option>
+						<option value="2XL">2XL (63cm)</option>
+						<option value="3XL">3XL (66cm)</option>
+						<option value="4XL">4XL (69cm)</option>
+						<option value="5XL">5XL (72cm)</option>
+						<option value="6XL">6XL (75cm)</option>
+						<option value="7XL">7XL (78cm)</option>
 					</select>
 				</label>
 				<br/>
@@ -153,17 +152,17 @@
 				<div class="item-price"><strong>Price: £37.50</strong></div>
 				<label>Size:
 					<select id="size_0_3">
-						<option value="XS (42cm)">XS (42cm)</option>
-						<option value="S (45cm)">S (45cm)</option>
-						<option value="M (48cm)">M (48cm)</option>
-						<option value="L (49cm)">L (49cm)</option>
-						<option value="XL (51cm)">XL (51cm)</option>
-						<option value="2XL (53cm)">2XL (53cm)</option>
-						<option value="3XL (55cm)">3XL (55cm)</option>
-						<option value="4XL (57cm)">4XL (57cm)</option>
-						<option value="5XL (59cm)">5XL (59cm)</option>
-						<option value="6XL (61cm)">6XL (61cm)</option>
-						<option value="7XL (63cm)">7XL (63cm)</option>
+						<option value="XS">XS (42cm)</option>
+						<option value="S">S (45cm)</option>
+						<option value="M">M (48cm)</option>
+						<option value="L">L (49cm)</option>
+						<option value="XL">XL (51cm)</option>
+						<option value="2XL">2XL (53cm)</option>
+						<option value="3XL">3XL (55cm)</option>
+						<option value="4XL">4XL (57cm)</option>
+						<option value="5XL">5XL (59cm)</option>
+						<option value="6XL">6XL (61cm)</option>
+						<option value="7XL">7XL (63cm)</option>
 					</select>
 				</label>
 				<br/>
@@ -950,19 +949,37 @@
 	</div>
 	
 	
-	<div class="section" id="section-thankyou" style="display:none">
+	<div class="section" id="section-order-success" style="display: none;">
 		<div class="section-header">
-			<h2>Order Summary (Test Only)</h2>
-			<p style="color: red; font-weight: bold;">This is a <u>test confirmation page</u>. No order has been submitted.</p>
+			<h2>✅ Order Submitted Successfully</h2>
 		</div>
-		<div class="summary-box">
-			<p><strong>Name:</strong> <span id="summaryName"></span></p>
-			<p><strong>Email:</strong> <span id="summaryEmail"></span></p>
-			<p><strong>Club Allowance Used:</strong> £<span id="summaryAllowanceUsed"></span></p>
-			<p><strong>Total to Pay:</strong> £<span id="summaryToPay"></span></p>
-			<p id="summaryMessage" style="font-weight: bold;"></p>
+		<p>Thank you for your order. A confirmation has been sent to your email.</p>
+		<p>Someone will be in touch with the details of your order once everyone’s order has been collected.</p>
+		<p>You may now close this page or start a new order if needed.</p>
+
+		<div style="margin-top: 20px;">
+			<button onclick="location.reload()" class="prev-btn">Start New Order</button>
 		</div>
 	</div>
+	
+
+	<div class="section" id="section-order-failure" style="display: none;">
+		<div class="section-header">
+			<h2>❌ Order Submission Failed</h2>
+		</div>
+		<p>We were unable to process your order. Please contact support.</p>
+		<p><b>Error Message: </b><i><span class="error-message"></span></i></p> <!-- dynamically injected -->
+		<div style="margin-top: 20px;">
+			<button onclick="showSection('section-review')" class="prev-btn">Back to Review</button>
+		</div>
+	</div>
+	
+	
+	<div id="processingOverlay" style="display: none;">
+		<div class="overlay-background"></div>
+		<div class="overlay-message">Redirecting to payment…<br>Please wait.</div>
+	</div>
+
 	
 	
 	<div class="modal" id="shirtModal">
@@ -994,367 +1011,5 @@
 			<button onclick="saveInitialsDetails()">Save &amp; Continue</button>
 		</div>
 	</div>
-	
-
-  
-  <script>
-	let currentSection = -1;
-	const basketItems = [];	
-	let kitAllowanceLimit;
-
-// Get from URL or meta tag
-const params = new URLSearchParams(window.location.search);
-const urlAllowance = parseFloat(params.get("kitallowance"));
-
-if (!isNaN(urlAllowance)) {
-	kitAllowanceLimit = urlAllowance;
-} else {
-	kitAllowanceLimit = parseFloat(document.querySelector('meta[name="kit-allowance-limit"]').content);
-}
-
-window.addEventListener('DOMContentLoaded', () => {
-	const name = params.get('name');
-	const email = params.get('email');
-	
-	if (name) {
-		document.getElementById('fullName').value = decodeURIComponent(name.replace(/\+/g, ' '));
-	}
-	
-	if (email) {
-		document.getElementById('email').value = decodeURIComponent(email);
-	}
-
-	const allowanceEls = document.querySelectorAll("#allowanceText, #allowanceTextRepeat");
-	allowanceEls.forEach(el => {
-		el.textContent = `£${kitAllowanceLimit}`;
-	});
-	
-	const sections = document.querySelectorAll(".section:not(#start-screen):not(#section-submitted):not(#basket-panel):not(#section-thankyou)");
-	const total = sections.length;
-
-	sections.forEach((section, index) => {
-		const pageText = `Page ${index + 1} of ${total}`;
-
-		// Insert at the top
-		const topIndicator = document.createElement("div");
-		topIndicator.className = "top-page-indicator";
-		topIndicator.textContent = pageText;
-		section.insertBefore(topIndicator, section.firstChild);
-
-		// Append below navigation buttons
-		const navButtons = section.querySelector(".button-nav-container");
-		if (navButtons) {
-		const bottomIndicator = document.createElement("div");
-		bottomIndicator.className = "bottom-page-indicator";
-		bottomIndicator.textContent = pageText;
-		navButtons.appendChild(bottomIndicator);
-		}
-	});
-});
-
-
-function startOrder() {
-  const name = document.getElementById("fullName").value.trim();
-  const email = document.getElementById("email").value.trim();
-  if (!name || !email) {
-    alert("Please enter both name and email.");
-    return;
-  }
-  document.getElementById("start-screen").style.display = "none";
-  
-  checkMembership(name);
-  
-  navigate(0);
-}
-
-function navigate(sectionId) {
-  // Hide the current section
-  if (typeof currentSection === 'number' && currentSection >= 0) {
-    const current = document.getElementById("section-" + currentSection);
-    if (current) current.style.display = "none";
-  }
-
-  // Scroll to top
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-
-  // Always hide review section unless navigating to it
-  document.getElementById("section-review").style.display = "none";
-
-  // Handle special case for review
-  if (sectionId === 'review') {
-    document.getElementById("section-review").style.display = "block";
-    document.getElementById("reviewName").textContent = document.getElementById("fullName").value;
-    document.getElementById("reviewEmail").textContent = document.getElementById("email").value;
-    renderBasket();
-    renderReviewBasket();
-
-    const basketPanel = document.getElementById("basket-panel");
-    if (basketPanel) basketPanel.style.display = "none";
-
-    updateTabActive('review');
-    return;
-  }
-
-  // Show selected section
-  const next = document.getElementById("section-" + sectionId);
-  if (next) next.style.display = "block";
-  currentSection = sectionId;
-
-  // Show/hide basket depending on section
-  const hideBasketOn = ['start', 'review', 'thankyou'];
-  const basketPanel = document.getElementById("basket-panel");
-  if (basketPanel) {
-    basketPanel.style.display = hideBasketOn.includes(sectionId) ? "none" : "block";
-  }
-
-  // Update tab highlight
-  updateTabActive(sectionId);
-}
-
-
-function updateTabActive(sectionId) {
-  const tabs = document.querySelectorAll(".tab-btn");
-  tabs.forEach((btn, index) => {
-    btn.classList.remove("active");
-
-    // Match string ID or numeric index
-    if (index === sectionId || btn.dataset.section === sectionId.toString()) {
-      btn.classList.add("active");
-    }
-  });
-}
-
-
-
-function addToBasket(title, price, qtyId, sizeId) {
-  const qty = parseInt(document.getElementById(qtyId).value);
-  const size = sizeId === 'No size' ? 'No size' : document.getElementById(sizeId).value;
-  const parsedPrice = parseFloat(price.toString().replace(/[^0-9.]/g, ""));
-  if (!qty || qty <= 0 || isNaN(parsedPrice)) return;
-
-  const subtotal = qty * parsedPrice;
-  const item = { title, size, qty, price: parsedPrice, subtotal };
-
-  // Show initials prompt for certain items
-  if (title.includes("After-Match Shirt") || title.includes("Playing Shorts")) {
-    currentCustomItem = item;
-    document.getElementById("itemInitials").value = "";
-    document.getElementById("initialsModal").style.display = "block";
-    return;
-  }
-
-  // Show customisation modal for playing shirts
-  if (title.includes("Playing Shirt")) {
-    promptShirtCustomisation(item); // this handles adding
-    return;
-  }
-
-  actuallyAddToBasket(item);
-  document.getElementById(qtyId).value = 0;
-}
-
-function actuallyAddToBasket(item) {
-  basketItems.push(item);
-  renderBasket();
-}
-
-
-
-
-let kitAllowance = 0;
-let kitAllowanceUsed = false;
-
-async function checkMembership(name) {
-  const response = await fetch("https://defaulta4b11af850d24780929f5875abda53.33.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5bd7af16846c4dcf9818d2e5e05ca4fe/triggers/manual/paths/invoke/?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=sCgrddXcyMExvzu0e0Dg7uzeQfIG2LxeXKgcOr369Ds", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ name: name })
-  });
-
-  const result = await response.json();
-  const used = parseFloat(result.receivedKit || "0");
-
-  if (result.memberFound && used < kitAllowanceLimit) {
-    kitAllowance = kitAllowanceLimit - used;
-    kitAllowanceUsed = false;
-  } else if (result.memberFound && used >= kitAllowanceLimit) {
-    kitAllowance = 0;
-    kitAllowanceUsed = true;
-  } else {
-    kitAllowance = 0;
-    kitAllowanceUsed = false;
-  }
-
-  renderBasket(); // refresh totals
-}
-
-function renderBasket() {
-  const basketList = document.getElementById("basketList");
-  const subtotalElement = document.getElementById("subtotalAmount");
-  const discountElement = document.getElementById("discountAmount");
-  const totalElement = document.getElementById("totalAmount");
-
-  basketList.innerHTML = "";
-  let subtotal = 0;
-
-  basketItems.forEach((item, index) => {
-    const itemTotal = item.qty * item.price;
-    subtotal += itemTotal;
-
-    const li = document.createElement("li");
-    let itemDetails = `${item.qty} x ${item.title} (${item.size})`;
-
-	if (item.initials) {
-	  itemDetails += ` - Initials: ${item.initials}`;
-	}
-	if (item.shirtNumber && item.shirtName) {
-	  itemDetails += ` - No: ${item.shirtNumber}, Name: ${item.shirtName}`;
-	}
-
-	li.innerHTML = `${itemDetails} - £${itemTotal.toFixed(2)} <button onclick="removeFromBasket(${index})">Remove</button>`;
-	
-	basketList.appendChild(li);
-  });
-
-  const discount = Math.min(kitAllowance, subtotal);
-  const finalTotal = subtotal - discount;
-  
-  document.getElementById("kitAllowanceValue").textContent = `£${(kitAllowance).toFixed(2)}`;
-
-  subtotalElement.textContent = subtotal.toFixed(2);
-  discountElement.textContent = discount > 0
-    ? discount.toFixed(2)
-    : kitAllowanceUsed
-      ? "Already used"
-      : "0.00";
-
-  totalElement.textContent = finalTotal.toFixed(2);
-}
-
-
-function renderReviewBasket() {
-  const container = document.getElementById("reviewBasket");
-  container.innerHTML = "";
-
-  const submitBtn = document.getElementById("submitOrderBtn");
-  if (submitBtn) submitBtn.style.display = "none"; // hide by default
-
-  if (basketItems.length === 0) {
-    container.innerHTML = "<p>No items in basket.</p>";
-    return;
-  }
-
-  const ul = document.createElement("ul");
-  let subtotal = 0;
-
-  basketItems.forEach((item, index) => {
-    const itemSubtotal = item.qty * item.price;
-    subtotal += itemSubtotal;
-    const li = document.createElement("li");
-    li.innerHTML = `${item.qty} x ${item.title} (${item.size})${item.initials ? ` - Initials: ${item.initials}` : ""}${item.nameOnBack ? ` - Name: ${item.nameOnBack}` : ""}${item.numberOnBack ? ` - Number: ${item.numberOnBack}` : ""} - £${itemSubtotal.toFixed(2)} <button onclick="removeFromBasket(${index}); renderReviewBasket(); renderBasket();">Remove</button>`;
-    ul.appendChild(li);
-  });
-
-  const discount = Math.min(kitAllowance, subtotal);
-  const totalToPay = subtotal - discount;
-
-  container.appendChild(ul);
-
-  // Add full total breakdown
-  container.innerHTML += `
-    <p><strong>Subtotal:</strong> £${subtotal.toFixed(2)}<br/>
-    <span style="color: green;"><strong>Club Allowance:</strong> £${discount.toFixed(2)}</span><br/>
-    <strong>Total to Pay:</strong> £${totalToPay.toFixed(2)}</p>
-  `;
-
-  // Required item logic
-  const missingShorts = !basketItems.some(item => item.title.toLowerCase().includes("playing shorts"));
-  const missingAftermatch = !basketItems.some(item => item.title.toLowerCase().includes("after-match shirt"));
-
-  if (missingShorts || missingAftermatch) {
-    const warningDiv = document.createElement("div");
-    warningDiv.className = "review-warning-box";
-
-    if (missingShorts) {
-      warningDiv.innerHTML += `
-        <p>⚠️ You have not selected <strong>Playing Shorts</strong>.</p>
-        <label><input type="checkbox" id="confirmShorts"> I confirm I already own a pair.</label>
-      `;
-    }
-
-    if (missingAftermatch) {
-      warningDiv.innerHTML += `
-        <p>⚠️ You have not selected an <strong>Aftermatch Shirt</strong>.</p>
-        <label><input type="checkbox" id="confirmAftermatch"> I confirm I already own one.</label>
-      `;
-    }
-
-    container.appendChild(warningDiv);
-  }
-
-  // Recheck confirmation
-  setTimeout(() => {
-    const confirmShorts = document.getElementById("confirmShorts");
-    const confirmAftermatch = document.getElementById("confirmAftermatch");
-
-    function validateConfirmations() {
-      const shortsOK = !missingShorts || (confirmShorts && confirmShorts.checked);
-      const aftermatchOK = !missingAftermatch || (confirmAftermatch && confirmAftermatch.checked);
-
-      if (shortsOK && aftermatchOK && submitBtn) {
-        submitBtn.style.display = "block";
-      } else {
-        submitBtn.style.display = "none";
-      }
-    }
-
-    if (confirmShorts) confirmShorts.addEventListener("change", validateConfirmations);
-    if (confirmAftermatch) confirmAftermatch.addEventListener("change", validateConfirmations);
-
-    validateConfirmations();
-  }, 100); // short delay to allow DOM insert
-}
-
-
-
-
-function removeFromBasket(index) {
-  basketItems.splice(index, 1);
-  renderBasket();
-  renderReviewBasket();
-}
-
-// bind startOrder after DOM is ready
-document.addEventListener("DOMContentLoaded", function() {
-	document.getElementById("startButton").onclick = startOrder;
-});
-
-
-function submitOrder() {
-  // For test only – skip sending to backend
-  document.getElementById("section-review").style.display = "none";
-  document.getElementById("section-thankyou").style.display = "block";
-  document.getElementById("basket-panel").style.display = "none";
-
-  // Populate summary
-  document.getElementById("summaryName").textContent = document.getElementById("fullName").value;
-  document.getElementById("summaryEmail").textContent = document.getElementById("email").value;
-
-  const subtotal = basketItems.reduce((sum, item) => sum + item.qty * item.price, 0);
-  const discount = Math.min(kitAllowance, subtotal);
-  const toPay = subtotal - discount;
-
-  document.getElementById("summaryAllowanceUsed").textContent = discount.toFixed(2);
-  document.getElementById("summaryToPay").textContent = toPay.toFixed(2);
-
-  const msg = toPay === 0
-    ? "✅ Your order has been fully covered by your club allowance. (Reminder: this is just a test.)"
-    : `💷 You will need to pay £${toPay.toFixed(2)} for your order. (Reminder: this is just a test.)`;
-
-  document.getElementById("summaryMessage").textContent = msg;
-}
-  </script>
-
-  <script src="shirt-modal-script.js"></script>
  </body>
 </html>
