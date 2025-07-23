@@ -59,10 +59,34 @@ window.addEventListener('DOMContentLoaded', () => {
 	
 	if (paymentStatus === "cancel") {
 		sessionStorage.removeItem("hasSubmitted");
-		hideAllSections();
-		document.getElementById("section-order-failure").style.display = "block";
-		if (document.getElementById("basket-panel")) {
-			document.getElementById("basket-panel").style.display = "none";
+
+		const savedOrder = sessionStorage.getItem("orderData");
+		
+		if (savedOrder) {
+			try {
+				const orderData = JSON.parse(savedOrder);
+					// Restore form fields
+					document.getElementById("fullName").value = orderData.name || "";
+					document.getElementById("email").value = orderData.email || "";
+
+					// Restore basketItems array (clear and repopulate)
+					basketItems.length = 0;
+					orderData.basket.forEach(item => basketItems.push(item));
+
+					// Restore kit allowance if needed
+					kitAllowance = orderData.kitAllowance || 0;
+
+					// Update UI
+					renderBasket();
+					renderReviewBasket();
+
+					showFailure("Your payment was cancelled. Please review your order and try again.");
+				} catch (err) {
+					console.error("Failed to restore order from session:", err);
+					showFailure("Payment was cancelled. Unfortunately, we couldn't restore your previous order.");
+			}
+		} else {
+			showFailure("Payment was cancelled. Your order was not saved.");
 		}
 	}
 	
