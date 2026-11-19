@@ -1,3 +1,7 @@
+// CALNE RFC SETTINGS — change false to true to restore either feature
+const ENABLE_KIT_ALLOWANCE = false;
+const REQUIRE_KIT_CONFIRMATION = false;
+
 
 	let currentSection = -1;
 	const basketItems = [];	
@@ -13,7 +17,7 @@
 	if (!isNaN(urlAllowance)) {
 		kitAllowanceLimit = urlAllowance;
 	} else {
-		kitAllowanceLimit = parseFloat(document.querySelector('meta[name="kit-allowance-limit"]').content);
+		kitAllowanceLimit = parseFloat(document.querySelector('meta[name="kit-allowance-limit"]')?.content || "0");
 	}
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -32,6 +36,7 @@ window.addEventListener('DOMContentLoaded', () => {
 	const allowanceEls = document.querySelectorAll("#allowanceText, #allowanceTextRepeat");
 	allowanceEls.forEach(el => {
 		el.textContent = `£${kitAllowanceLimit}`;
+        if (!ENABLE_KIT_ALLOWANCE) el.style.display = "none";
 	});
 	
 	if (paymentStatus === "success") {
@@ -74,7 +79,7 @@ window.addEventListener('DOMContentLoaded', () => {
 					orderData.basket.forEach(item => basketItems.push(item));
 
 					// Restore kit allowance if needed
-					kitAllowance = orderData.kitAllowance || 0;
+					kitAllowance = ENABLE_KIT_ALLOWANCE ? (orderData.kitAllowance || 0) : 0;
 
 					// Update UI
 					renderBasket();
@@ -130,7 +135,8 @@ function startOrder() {
   }
   document.getElementById("start-screen").style.display = "none";
   
-  checkMembership(name);
+  if (ENABLE_KIT_ALLOWANCE) checkMembership(name);
+  else { kitAllowance = 0; kitAllowanceUsed = false; }
   
   navigate(0);
 }
@@ -233,6 +239,7 @@ function actuallyAddToBasket(item) {
 
 
 async function checkMembership(name) {
+  if (!ENABLE_KIT_ALLOWANCE) { kitAllowance = 0; kitAllowanceUsed = false; return; }
   const response = await fetch("https://defaulta4b11af850d24780929f5875abda53.33.environment.api.powerplatform.com:443/powerautomate/automations/direct/workflows/5bd7af16846c4dcf9818d2e5e05ca4fe/triggers/manual/paths/invoke/?api-version=1&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=sCgrddXcyMExvzu0e0Dg7uzeQfIG2LxeXKgcOr369Ds", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -290,10 +297,12 @@ function renderBasket() {
 	basketList.appendChild(li);
   });
 
-  const discount = Math.min(kitAllowance, subtotal);
+  const discount = ENABLE_KIT_ALLOWANCE ? Math.min(kitAllowance, subtotal) : 0;
   const finalTotal = subtotal - discount;
   
   document.getElementById("kitAllowanceValue").textContent = `£${(kitAllowance).toFixed(2)}`;
+  const allowanceRow = document.getElementById("kitAllowanceValue")?.closest(".basket-line");
+  if (allowanceRow) allowanceRow.style.display = ENABLE_KIT_ALLOWANCE ? "" : "none";
 
   subtotalElement.textContent = subtotal.toFixed(2);
   discountElement.textContent = discount > 0
@@ -329,7 +338,7 @@ function renderReviewBasket() {
     ul.appendChild(li);
   });
 
-  const discount = Math.min(kitAllowance, subtotal);
+  const discount = ENABLE_KIT_ALLOWANCE ? Math.min(kitAllowance, subtotal) : 0;
   const totalToPay = subtotal - discount;
 
   container.appendChild(ul);
@@ -337,7 +346,7 @@ function renderReviewBasket() {
   // Add full total breakdown
   container.innerHTML += `
     <p><strong>Subtotal:</strong> £${subtotal.toFixed(2)}<br/>
-    <span style="color: green;"><strong>Club Allowance:</strong> £${discount.toFixed(2)}</span><br/>
+    ${ENABLE_KIT_ALLOWANCE ? `<span style="color: green;"><strong>Club Allowance:</strong> £${discount.toFixed(2)}</span><br/>` : ""}
     <strong>Total to Pay:</strong> £${totalToPay.toFixed(2)}</p>
   `;
 
@@ -352,14 +361,14 @@ function renderReviewBasket() {
     if (missingShorts) {
       warningDiv.innerHTML += `
         <p>⚠️ You have not selected <strong>Playing Shorts</strong>.</p>
-        <label><input type="checkbox" id="confirmShorts"> I confirm I already own a pair.</label>
+        ${REQUIRE_KIT_CONFIRMATION ? `<label><input type="checkbox" id="confirmShorts"> I confirm I already own a pair.</label>` : ""}
       `;
     }
 
     if (missingAftermatch) {
       warningDiv.innerHTML += `
         <p>⚠️ You have not selected an <strong>Aftermatch Shirt</strong>.</p>
-        <label><input type="checkbox" id="confirmAftermatch"> I confirm I already own one.</label>
+        ${REQUIRE_KIT_CONFIRMATION ? `<label><input type="checkbox" id="confirmAftermatch"> I confirm I already own one.</label>` : ""}
       `;
     }
 
@@ -372,8 +381,8 @@ function renderReviewBasket() {
     const confirmAftermatch = document.getElementById("confirmAftermatch");
 
     function validateConfirmations() {
-      const shortsOK = !missingShorts || (confirmShorts && confirmShorts.checked);
-      const aftermatchOK = !missingAftermatch || (confirmAftermatch && confirmAftermatch.checked);
+      const shortsOK = !REQUIRE_KIT_CONFIRMATION || !missingShorts || (confirmShorts && confirmShorts.checked);
+      const aftermatchOK = !REQUIRE_KIT_CONFIRMATION || !missingAftermatch || (confirmAftermatch && confirmAftermatch.checked);
 
       if (shortsOK && aftermatchOK && submitBtn) {
         submitBtn.style.display = "block";
@@ -438,20 +447,20 @@ async function submitOrder() {
 		emailBody += ' - £' + itemSubtotal.toFixed(2) + '</li>';
 	});
 
-	const discount = Math.min(kitAllowance, subtotal);
+	const discount = ENABLE_KIT_ALLOWANCE ? Math.min(kitAllowance, subtotal) : 0;
 	const totalToPay = subtotal - discount;
-	let kitAllowanceUsed = totalToPay > 0 ? 120 : 120- (kitAllowance - subtotal);
+	let kitAllowanceUsed = ENABLE_KIT_ALLOWANCE ? (totalToPay > 0 ? kitAllowanceLimit : kitAllowanceLimit - (kitAllowance - subtotal)) : 0;
 
 	emailBody += '</ul>';
 	emailBody += '<p><b>Total Amount: </b>£' + subtotal.toFixed(2) + '</p>';
-	emailBody += '<p><b>Kit Allowance: </b>£' + kitAllowance.toFixed(2) + '</p>';
+	if (ENABLE_KIT_ALLOWANCE) emailBody += '<p><b>Kit Allowance: </b>£' + kitAllowance.toFixed(2) + '</p>';
 	emailBody += '<p><b>Total To Pay: </b>£' + totalToPay.toFixed(2) + '</p>';
 
 	const orderData = {
 		name: fullName,
 		email: email,
 		basket: basketItems,
-		kitAllowance: parseFloat(kitAllowance.toFixed(2)),
+		kitAllowance: ENABLE_KIT_ALLOWANCE ? parseFloat(kitAllowance.toFixed(2)) : 0,
 		orderTotal: parseFloat(subtotal.toFixed(2)),
 		totalToPay: parseFloat(totalToPay.toFixed(2)),
 		emailSubject: emailSubject,
